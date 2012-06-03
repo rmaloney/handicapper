@@ -1,13 +1,9 @@
 Handicapper::Application.routes.draw do
+  devise_for :users
+
   resources :games
-
-  get "game/index"
-
-  get "game/new"
-
-  get "game/edit"
-
-  get "game/show"
+ 
+ 
 
   get "pages/about"
 

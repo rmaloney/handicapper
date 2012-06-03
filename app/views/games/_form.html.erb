@@ -11,39 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :week %><br />
-    <%= f.number_field :week %>
+<div class="span6">
+    <div class="field">
+      <%= f.label :week %><br />
+      <%= f.number_field :week %>
+    </div>
+    <div class="field">
+      <%= f.label :home_team %><br />
+      <%= f.text_field :home_team %>
+    </div>
+    <div class="field">
+      <%= f.label :visitor_team %><br />
+      <%= f.text_field :visitor_team %>
+    </div>
+    <div class="field">
+      <%= f.label :favorite %><br />
+      <%= f.text_field :favorite %>
+    </div>
+    <div class="field">
+      <%= f.label :line %><br />
+      <%= f.text_field :line %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :home_team %><br />
-    <%= f.text_field :home_team %>
+
+  <div class="span5">
+    <div class="field">
+      <%= f.label :total %><br />
+      <%= f.text_field :total %>
+    </div>
+    <div class="field">
+      <%= f.label :kickoff %><br />
+      <%= f.time_select :kickoff %>
+    </div>
+    <div class="field">
+      <%= f.label :status %><br />
+      <%= f.text_field :status %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :visitor_team %><br />
-    <%= f.text_field :visitor_team %>
-  </div>
-  <div class="field">
-    <%= f.label :favorite %><br />
-    <%= f.text_field :favorite %>
-  </div>
-  <div class="field">
-    <%= f.label :line %><br />
-    <%= f.text_field :line %>
-  </div>
-  <div class="field">
-    <%= f.label :total %><br />
-    <%= f.text_field :total %>
-  </div>
-  <div class="field">
-    <%= f.label :kickoff %><br />
-    <%= f.time_select :kickoff %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
 <% end %>

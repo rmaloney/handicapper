@@ -45,13 +45,19 @@
           <a class="brand" href="#">Handicapper</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Account Settings</a></li>
-              <li><a href="#about">About</a></li>
+              <li class="active"><a href="/games">Games</a></li>
+              <li><a href="#about">Standings</a></li>
+              <li><a href="#about">News</a></li>
               
             </ul>
 
             
-            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+              <% if user_signed_in? %>  
+                <p class="pull-right">Signed in as <%= current_user.email %>.</p>  
+                <p class="pull-right"> <%= link_to "Sign out", destroy_user_session_path %>  | <%= link_to "Account Settings", edit_user_registration_path %></p>
+              <% else %>  
+                <p> </p>  
+              <% end %> 
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -59,8 +65,8 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <h2> Your content goes here </h2>    
-
+       <!-- Begin main content -->   
+        <%= yield %>
         
       </div><!--/row-->
 
