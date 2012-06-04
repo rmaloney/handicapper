@@ -18,15 +18,15 @@
     </div>
     <div class="field">
       <%= f.label :home_team %><br />
-      <%= f.text_field :home_team %>
+      <%= f.select :home_team, Game::TEAMS %>
     </div>
     <div class="field">
       <%= f.label :visitor_team %><br />
-      <%= f.text_field :visitor_team %>
+      <%= f.select :visitor_team, Game::TEAMS %>
     </div>
     <div class="field">
       <%= f.label :favorite %><br />
-      <%= f.text_field :favorite %>
+      <%= f.select :favorite, Game::TEAMS %>
     </div>
     <div class="field">
       <%= f.label :line %><br />
@@ -41,7 +41,7 @@
     </div>
     <div class="field">
       <%= f.label :kickoff %><br />
-      <%= f.time_select :kickoff %>
+      <%= f.text_field :kickoff %>
     </div>
     <div class="field">
       <%= f.label :status %><br />

@@ -1,37 +1,38 @@
-<h1>Games</h1>
 
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Home team</th>
-    <th>Visitor team</th>
-    <th>Favorite</th>
-    <th>Line</th>
-    <th>Total</th>
-    <th>Kickoff</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <h1>Games</h1>
 
-<% @games.each do |game| %>
-  <tr>
-    <td><%= game.week %></td>
-    <td><%= game.home_team %></td>
-    <td><%= game.visitor_team %></td>
-    <td><%= game.favorite %></td>
-    <td><%= game.line %></td>
-    <td><%= game.total %></td>
-    <td><%= game.kickoff %></td>
-    <td><%= game.status %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <table width="80%" class="table">
+      <tr>
+        <th>Week</th>
+        <th>Home </th>
+        <th>Visitor </th>
+        <th>Favorite</th>
+        <th>Line</th>
+        <th>Total</th>
+        <th>Kickoff</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.week %></td>
+        <td><%= game.home_team %></td>
+        <td><%= game.visitor_team %></td>
+        <td><%= game.favorite %></td>
+        <td><%= game.line %></td>
+        <td><%= game.total %></td>
+        <td><%= game.kickoff %></td>
+        <td><%= game.status %></td>
+        <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<%= link_to 'New Game', new_game_path %>
+    <br />
+
+    <%= link_to 'New Game', new_game_path %>
