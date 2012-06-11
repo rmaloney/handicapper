@@ -1,0 +1,38 @@
+        new_user_session GET    /users/sign_in(.:format)                 devise/sessions#new
+            user_session POST   /users/sign_in(.:format)                 devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)                devise/sessions#destroy
+           user_password POST   /users/password(.:format)                devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)            devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)           devise/passwords#edit
+                         PUT    /users/password(.:format)                devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)                  devise/registrations#cancel
+       user_registration POST   /users(.:format)                         devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)                 devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)                    devise/registrations#edit
+                         PUT    /users(.:format)                         devise/registrations#update
+                         DELETE /users(.:format)                         devise/registrations#destroy
+              game_plays GET    /games/:game_id/plays(.:format)          plays#index
+                         POST   /games/:game_id/plays(.:format)          plays#create
+           new_game_play GET    /games/:game_id/plays/new(.:format)      plays#new
+          edit_game_play GET    /games/:game_id/plays/:id/edit(.:format) plays#edit
+               game_play GET    /games/:game_id/plays/:id(.:format)      plays#show
+                         PUT    /games/:game_id/plays/:id(.:format)      plays#update
+                         DELETE /games/:game_id/plays/:id(.:format)      plays#destroy
+                   games GET    /games(.:format)                         games#index
+                         POST   /games(.:format)                         games#create
+                new_game GET    /games/new(.:format)                     games#new
+               edit_game GET    /games/:id/edit(.:format)                games#edit
+                    game GET    /games/:id(.:format)                     games#show
+                         PUT    /games/:id(.:format)                     games#update
+                         DELETE /games/:id(.:format)                     games#destroy
+                   plays GET    /plays(.:format)                         plays#index
+                         POST   /plays(.:format)                         plays#create
+                new_play GET    /plays/new(.:format)                     plays#new
+               edit_play GET    /plays/:id/edit(.:format)                plays#edit
+                    play GET    /plays/:id(.:format)                     plays#show
+                         PUT    /plays/:id(.:format)                     plays#update
+                         DELETE /plays/:id(.:format)                     plays#destroy
+                   plays        /plays(.:format)                         plays#index
+             pages_about GET    /pages/about(.:format)                   pages#about
+              pages_help GET    /pages/help(.:format)                    pages#help
+                    root        /                                        games#index
