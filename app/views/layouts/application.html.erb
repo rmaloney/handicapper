@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>nfl football, motherfuckers</title>
+    <title>Reverse DF Handicapping League</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -42,32 +42,50 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Reverse DoubleFN Handicapping Contest</a>
+          <a class="brand" href="#">Reverse DF Handicapping <%= image_tag('football_ball.png') %></a>
           <div class="nav-collapse">
-            <ul class="nav">
+            <ul class="nav pull-right">
               <li class="active"><a href="/games">Games</a></li>
               <li><a href="#about">Standings</a></li>
-              <li><a href="#about">News</a></li>
+              <li><a href="#about">About</a></li>
               
             </ul>
 
             
-              <% if user_signed_in? %>  
-                <p class="pull-right">Signed in as <%= current_user.email %>.</p>  
-                <p class="pull-right"> <%= link_to "Sign out", destroy_user_session_path %>  | <%= link_to "Account Settings", edit_user_registration_path %></p>
-              <% else %>  
-                <p> </p>  
-              <% end %> 
+              
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">
-       <!-- Begin main content -->   
-        <%= yield %>
+      <div class="row-fluid">    <!-- Begin main content -->   
+        <div class="span9">
+          <div class="pull-right">
+                <% if user_signed_in? %>  
+                  <p class="">Signed in as <%= current_user.email %>.</p>  
+                  <p class=""> <%= link_to "Sign out", destroy_user_session_path %>  | <%= link_to "Account Settings", edit_user_registration_path %></p>
+                <% else %>  
+                  <p> </p>  
+                <% end %> 
+          </div><br/>
         
+          <%= yield %>
+        </div>
+
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">My Plays</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Settings</a></li>
+              
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
       </div><!--/row-->
 
       <hr>

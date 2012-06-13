@@ -1,6 +1,8 @@
 class Game < ActiveRecord::Base
 
 	validates :line, :home_team, :visitor_team, :favorite, :total, :presence => true
+	has_one :result
+	has_many :plays
 	
 	TEAMS = [
 		'NY Giants',
@@ -36,4 +38,13 @@ class Game < ActiveRecord::Base
 		'Oakland',
 		'Kansas City'
 	]
+
+	def underdog
+	    if home_team != favorite
+	        home_team
+	    else
+	        visitor_team
+	    end
+	end
+
 end

@@ -1,9 +1,16 @@
 Handicapper::Application.routes.draw do
   devise_for :users
 
-  resources :games
+  resources :plays
+  
+  resources :games do
+    resources :plays
+  end
+
  
- 
+
+ match 'plays' => 'plays#index', :as => 'plays'
+
 
   get "pages/about"
 

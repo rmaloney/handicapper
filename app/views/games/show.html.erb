@@ -43,3 +43,4 @@
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
+<%= link_to "Make a play on this game", new_game_play_path(@game), :game_id =>@game.id %>
