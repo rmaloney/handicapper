@@ -1,6 +1,6 @@
 class PlaysController < ApplicationController
 
-	before_filter :get_game, :except => :index
+	#before_filter :get_game, :except => :index
 
 	def index
 	    @plays = Play.find_all_by_user_id(current_user.id)
@@ -13,8 +13,10 @@ class PlaysController < ApplicationController
 
 
 	def new
-	 	
-	 	@play = @game.plays.build
+	 
+	 	#@game = Game.find(session[:game_id])
+	 	@play = Play.new
+	 	@game = Game.find(session[:game_id])
 
 	 	respond_to do |format|
 	      format.html # new.html.erb
@@ -23,11 +25,11 @@ class PlaysController < ApplicationController
 	end
 
 	def create
-	 	@play = @game.plays.build(params[:play])
+	 	@play =Play.new(params[:play])
 
 	 	respond_to do |format|
 	 		if @play.save
-		        format.html { redirect_to [@game, @play], :notice => 'Play was successfully created.' }
+		        format.html { redirect_to [@play], :notice => 'Your play has been created.' }
 		        format.json { render json: @play, status: :created, location: @play }
 		     else
 		        format.html { render action: "new" }
@@ -37,13 +39,22 @@ class PlaysController < ApplicationController
   	end
 
   	def show
-  		@play = @game.plays.find(params[:id])
+  		@play = Play.find(params[:id])
 
   		respond_to do |format|
   			format.html 
   		end
   	end
 
+  	def destroy
+  		@play = Play.find(params[:id])
+  		@play.destroy
+
+  		respond_to do |format|
+  			format.html {redirect_to(plays_url)}
+  			format.json { head :no_content }
+  		end
+  	end
 
   	private
 

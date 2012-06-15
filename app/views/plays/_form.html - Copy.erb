@@ -1,6 +1,6 @@
 
 
-<%= form_for(@play) do |f| %>
+<%= form_for(@play]) do |f| %>
 	<% if @play.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
@@ -17,10 +17,14 @@
 
 	<!-- Display information about the game !-->
 
-	<h3> Make a play </h3>  
+	<h3> <%= @game.visitor_team %> </h3>  at <h3> <%= @game.home_team %></h3>
+	<h4> <%= @game.kickoff %>  Kickoff Time </h4> 
+	<strong> Line: <%= @game.favorite %> by <%= @game.line %></strong>
+	<strong> Total <%=@game.total %> </strong>
+
 	<!-- Information displayed in this form is related to the play being made on the game !-->
 	 
-	<p>  <%= f.hidden_field(:game_id, :value => @game.id) %></p>
+	<p>  <%= f.hidden_field(:game_id, :value => @game.id ) %></p>
     <p>  <%= f.hidden_field(:user_id, :value => current_user.id ) %></p>
     
     <div class="controls">

@@ -39,6 +39,7 @@ class Game < ActiveRecord::Base
 		'Kansas City'
 	]
 
+	#determines the underdog of the game
 	def underdog
 	    if home_team != favorite
 	        home_team
@@ -47,4 +48,8 @@ class Game < ActiveRecord::Base
 	    end
 	end
 
+	#returns a concatanated title for the game
+	def game_title
+		"#{home_team} vs. #{visitor_team}"
+	end
 end

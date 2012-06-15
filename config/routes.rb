@@ -2,9 +2,9 @@ Handicapper::Application.routes.draw do
   devise_for :users
 
   resources :plays
-  
+
   resources :games do
-    resources :plays
+    
   end
 
  
