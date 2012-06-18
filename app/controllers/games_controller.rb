@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+
+  before_filter :get_user
   # GET /games
   # GET /games.json
   def index
@@ -80,5 +82,11 @@ class GamesController < ApplicationController
       format.html { redirect_to games_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def get_user
+    @current_user = current_user
   end
 end

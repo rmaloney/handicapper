@@ -21,7 +21,7 @@
       <tr>
         
         <td><%= game.home_team %></td>
-        <td><%= game.visitor_team %> @</td>
+        <td><%= game.visitor_team %> </td>
         <td><%= game.favorite %></td>
         <td><%= game.line %></td>
         <td><%= game.total %></td>
@@ -29,10 +29,14 @@
     
         
         
-        <td><%= link_to 'Show', game, :class => "btn" %></td>
-        <td><%= link_to 'Edit', edit_game_path(game), :class => "btn" %></td>
-        <td><%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
-      </tr>
+        <td><%= link_to 'Details', game, :class => "btn btn-primary" %>
+
+        <% if can? :update, game %>
+            <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
+           <%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
+        <% end %>
+        </td>
+    </tr>
   
     <% end %>   
     </table>

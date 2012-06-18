@@ -1,15 +1,19 @@
 Handicapper::Application.routes.draw do
-  devise_for :users
+  devise_for :users # :controllers => {:registrations => "registrations"}
 
-  resources :plays
+ # devise_scope :user do
+   # get '/settings' => 'registrations#edit'
+  #end
 
-  resources :games do
-    
-  end
+  resources :plays 
+
+  match "plays/:id" => "plays#show", :via => :get
+
+  resources :games 
 
  
 
- match 'plays' => 'plays#index', :as => 'plays'
+ #match 'plays' => 'plays#index', :as => 'plays'
 
 
   get "pages/about"

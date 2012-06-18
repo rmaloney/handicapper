@@ -4,13 +4,21 @@ class PlaysController < ApplicationController
 
 	def index
 	    @plays = Play.find_all_by_user_id(current_user.id)
-	   
+	    
 	    respond_to do |format|
 	      format.html # index.html.erb
 	      format.json { render json: @plays }
 	    end
 	end
 
+	def show
+  		@play = Play.find(params[:id])
+
+  		respond_to do |format|
+  			format.html 
+  			format.json { render json: @play }
+  		end
+  	end
 
 	def new
 	 
@@ -38,13 +46,7 @@ class PlaysController < ApplicationController
       	end
   	end
 
-  	def show
-  		@play = Play.find(params[:id])
 
-  		respond_to do |format|
-  			format.html 
-  		end
-  	end
 
   	def destroy
   		@play = Play.find(params[:id])

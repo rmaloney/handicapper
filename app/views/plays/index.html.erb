@@ -6,8 +6,8 @@
         <th>Selection </th>
        
        
-        <th>Game ID</th>
-        <th>Status</th>
+        <th>Home Team</th>
+        <th>Visitor</th>
         <th></th>
       </tr>
 
@@ -16,12 +16,14 @@
         
         
          <td> <%= play.selection %> </td>
-         <td> <%= play.game_id %> </td>
-         <td> <%= play.status %> </td>
+         <td> <%= play.game.home_team %> </td>
+         <td> <%= play.game.visitor_team %> </td>
 
-        <td><%= link_to 'Show', play_path , :class => "btn" %></td>
-        <td><%= link_to 'Edit', edit_game_play_path(play.game_id, play), :class => "btn" %></td>
-        <td><%= link_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
+        <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
+        <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>
+        <% if current_user.admin? %>
+          <%= link_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
+        <% end %>
       </tr>
     <% end %>
     </table>
