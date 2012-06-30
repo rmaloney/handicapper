@@ -1,0 +1,257 @@
+START DATE	Week	KICKOFF	AWAY	HOME	status
+9/5/2012	1 	8:30PM	Dallas 	NY Giants	open
+9/9/2012	1 	1:00PM	Indianapolis 	Chicago	open
+9/9/2012	1 	8:20PM	Pittsburgh 	Denver	open
+9/9/2012	1 	1:00PM	Philadelphia 	Cleveland	open
+9/9/2012	1 	4:15PM	Carolina 	Tampa Bay	open
+9/9/2012	1 	4:15PM	Seattle 	Arizona	open
+9/9/2012	1 	1:00PM	Atlanta 	Kansas City	open
+9/9/2012	1 	1:00PM	Buffalo 	NY Jets	open
+9/9/2012	1 	1:00PM	St. Louis 	Detroit	open
+9/9/2012	1 	4:15PM	San Francisco 	Green Bay	open
+9/9/2012	1 	1:00PM	Washington 	New Orleans	open
+9/9/2012	1 	1:00PM	Miami 	Houston	open
+9/9/2012	1 	1:00PM	New England 	Tennessee	open
+9/9/2012	1 	1:00PM	Jacksonville 	Minnesota	open
+9/10/2012	1 	10:15PM	San Diego 	Oakland	open
+9/10/2012	1 	7:00PM	Cinncinati 	Baltimore	open
+9/13/2012	2 	8:20PM	Chicago 	Green Bay	open
+9/16/2012	2 	8:20PM	Detroit 	San Francisco	open
+9/16/2012	2 	1:00PM	Cleveland 	Cinncinati	open
+9/16/2012	2 	1:00PM	Kansas City 	Buffalo	open
+9/16/2012	2 	4:15PM	Tennessee 	San Diego	open
+9/16/2012	2 	1:00PM	Minnesota 	Indianapolis	open
+9/16/2012	2 	4:15PM	Oakland 	Miami	open
+9/16/2012	2 	1:00PM	Baltimore 	Philadelphia	open
+9/16/2012	2 	1:00PM	Tampa Bay 	NY Giants	open
+9/16/2012	2 	1:00PM	Houston 	Jacksonville	open
+9/16/2012	2 	1:00PM	New Orleans 	Carolina	open
+9/16/2012	2 	1:00PM	Arizona 	New England	open
+9/16/2012	2 	4:05PM	Washington 	St. Louis	open
+9/16/2012	2 	4:05PM	Dallas 	Seattle	open
+9/16/2012	2 	4:15PM	NY Jets 	Pittsburgh	open
+9/17/2012	2 	8:30PM	Denver 	Atlanta	open
+9/20/2012	3 	8:20PM	NY Giants 	Carolina	open
+9/23/2012	3 	1:00PM	St. Louis 	Chicago	open
+9/23/2012	3 	4:15PM	Houston 	Denver	open
+9/23/2012	3 	1:00PM	Buffalo 	Cleveland	open
+9/23/2012	3 	4:05PM	Philadelphia 	Arizona	open
+9/23/2012	3 	4:05PM	Atlanta 	San Diego	open
+9/23/2012	3 	1:00PM	Jacksonville 	Indianapolis	open
+9/23/2012	3 	1:00PM	Tampa Bay 	Dallas	open
+9/23/2012	3 	1:00PM	NY Jets 	Miami	open
+9/23/2012	3 	4:15PM	Pittsburgh 	Oakland	open
+9/23/2012	3 	8:20PM	New England 	Baltimore	open
+9/23/2012	3 	1:00PM	Cinncinati 	Washington	open
+9/23/2012	3 	1:00PM	Kansas City 	New Orleans	open
+9/23/2012	3 	1:00PM	Detroit 	Tennessee	open
+9/23/2012	3 	1:00PM	San Francisco 	Minnesota	open
+9/24/2012	3 	8:30PM	Green Bay 	Seattle	open
+9/27/2012	4 	8:20PM	Cleveland 	Baltimore	open
+9/30/2012	4 	1:00PM	New England 	Buffalo	open
+9/30/2012	4 	4:05PM	Oakland 	Denver	open
+9/30/2012	4 	4:15PM	Washington 	Tampa Bay	open
+9/30/2012	4 	4:05PM	Miami 	Arizona	open
+9/30/2012	4 	1:00PM	San Diego 	Kansas City	open
+9/30/2012	4 	8:20PM	NY Giants 	Philadelphia	open
+9/30/2012	4 	1:00PM	Carolina 	Atlanta	open
+9/30/2012	4 	4:05PM	Cinncinati 	Jacksonville	open
+9/30/2012	4 	1:00PM	San Francisco 	NY Jets	open
+9/30/2012	4 	1:00PM	Minnesota 	Detroit	open
+9/30/2012	4 	4:15PM	New Orleans 	Green Bay	open
+9/30/2012	4 	1:00PM	Seattle 	St. Louis	open
+9/30/2012	4 	1:00PM	Tennessee 	Houston	open
+10/1/2012	4 	8:30PM	Chicago 	Dallas	open
+10/4/2012	5 	8:20PM	Arizona 	St. Louis	open
+10/7/2012	5 	4:15PM	Buffalo 	San Francisco	open
+10/7/2012	5 	1:00PM	Miami 	Cinncinati	open
+10/7/2012	5 	1:00PM	Baltimore 	Kansas City	open
+10/7/2012	5 	1:00PM	Green Bay 	Indianapolis	open
+10/7/2012	5 	1:00PM	Cleveland 	NY Giants	open
+10/7/2012	5 	4:05PM	Chicago 	Jacksonville	open
+10/7/2012	5 	4:05PM	Seattle 	Carolina	open
+10/7/2012	5 	4:15PM	Denver 	New England	open
+10/7/2012	5 	1:00PM	Atlanta 	Washington	open
+10/7/2012	5 	8:20PM	San Diego 	New Orleans	open
+10/7/2012	5 	1:00PM	Philadelphia 	Pittsburgh	open
+10/7/2012	5 	1:00PM	Tennessee 	Minnesota	open
+10/8/2012	5 	8:30PM	Houston 	NY Jets	open
+10/11/2012	6 	8:20PM	Pittsburgh 	Tennessee	open
+10/14/2012	6 	4:15PM	NY Giants 	San Francisco	open
+10/14/2012	6 	1:00PM	Cinncinati 	Cleveland	open
+10/14/2012	6 	1:00PM	Kansas City 	Tampa Bay	open
+10/14/2012	6 	4:05PM	Buffalo 	Arizona	open
+10/14/2012	6 	1:00PM	St. Louis 	Miami	open
+10/14/2012	6 	1:00PM	Detroit 	Philadelphia	open
+10/14/2012	6 	1:00PM	Oakland 	Atlanta	open
+10/14/2012	6 	1:00PM	Indianapolis 	NY Jets	open
+10/14/2012	6 	1:00PM	Dallas 	Baltimore	open
+10/14/2012	6 	4:15PM	Minnesota 	Washington	open
+10/14/2012	6 	4:05PM	New England 	Seattle	open
+10/14/2012	6 	8:20PM	Green Bay 	Houston	open
+10/15/2012	6 	8:30PM	Denver 	San Diego	open
+10/18/2012	7 	8:20PM	Seattle 	San Francisco	open
+10/21/2012	7 	8:20PM	Pittsburgh 	Cinncinati	open
+10/21/2012	7 	1:00PM	Tennessee 	Buffalo	open
+10/21/2012	7 	1:00PM	New Orleans 	Tampa Bay	open
+10/21/2012	7 	1:00PM	Cleveland 	Indianapolis	open
+10/21/2012	7 	1:00PM	Washington 	NY Giants	open
+10/21/2012	7 	1:00PM	Dallas 	Carolina	open
+10/21/2012	7 	4:15PM	NY Jets 	New England	open
+10/21/2012	7 	4:15PM	Jacksonville 	Oakland	open
+10/21/2012	7 	1:00PM	Green Bay 	St. Louis	open
+10/21/2012	7 	1:00PM	Baltimore 	Houston	open
+10/21/2012	7 	1:00PM	Arizona 	Minnesota	open
+10/22/2012	7 	8:30PM	Detroit 	Chicago	open
+10/25/2012	8 	8:20PM	Tampa Bay 	Minnesota	open
+10/28/2012	8 	1:00PM	Carolina 	Chicago	open
+10/28/2012	8 	8:20PM	New Orleans 	Denver	open
+10/28/2012	8 	1:00PM	San Diego 	Cleveland	open
+10/28/2012	8 	4:05PM	Oakland 	Kansas City	open
+10/28/2012	8 	4:15PM	NY Giants 	Dallas	open
+10/28/2012	8 	1:00PM	Atlanta 	Philadelphia	open
+10/28/2012	8 	1:00PM	Miami 	NY Jets	open
+10/28/2012	8 	1:00PM	Seattle 	Detroit	open
+10/28/2012	8 	1:00PM	Jacksonville 	Green Bay	open
+10/28/2012	8 	1:00PM	New England 	St. Louis	open
+10/28/2012	8 	1:00PM	Washington 	Pittsburgh	open
+10/28/2012	8 	1:00PM	Indianapolis 	Tennessee	open
+10/29/2012	8 	8:30PM	San Francisco 	Arizona	open
+11/1/2012	9 	8:20PM	Kansas City 	San Diego	open
+11/4/2012	9 	1:00PM	Denver 	Cinncinati	open
+11/4/2012	9 	1:00PM	Baltimore 	Cleveland	open
+11/4/2012	9 	1:00PM	Miami 	Indianapolis	open
+11/4/2012	9 	8:20PM	Dallas 	Atlanta	open
+11/4/2012	9 	4:15PM	Pittsburgh 	NY Giants	open
+11/4/2012	9 	1:00PM	Detroit 	Jacksonville	open
+11/4/2012	9 	1:00PM	Arizona 	Green Bay	open
+11/4/2012	9 	4:05PM	Tampa Bay 	Oakland	open
+11/4/2012	9 	1:00PM	Carolina 	Washington	open
+11/4/2012	9 	4:05PM	Minnesota 	Seattle	open
+11/4/2012	9 	1:00PM	Buffalo 	Houston	open
+11/4/2012	9 	1:00PM	Chicago 	Tennessee	open
+11/5/2012	9 	8:30PM	Philadelphia 	New Orleans	open
+11/8/2012	10	8:20PM	Indianapolis 	Jacksonville	open
+11/11/2012	10	4:15PM	St. Louis 	San Francisco	open
+11/11/2012	10	8:20PM	Houston 	Chicago	open
+11/11/2012	10	1:00PM	NY Giants 	Cinncinati	open
+11/11/2012	10	1:00PM	San Diego 	Tampa Bay	open
+11/11/2012	10	1:00PM	Tennessee 	Miami	open
+11/11/2012	10	4:15PM	Dallas 	Philadelphia	open
+11/11/2012	10	1:00PM	Denver 	Carolina	open
+11/11/2012	10	1:00PM	Buffalo 	New England	open
+11/11/2012	10	1:00PM	Oakland 	Baltimore	open
+11/11/2012	10	1:00PM	Atlanta 	New Orleans	open
+11/11/2012	10	4:05PM	NY Jets 	Seattle	open
+11/11/2012	10	1:00PM	Detroit 	Minnesota	open
+11/12/2012	10	8:30PM	Kansas City 	Pittsburgh	open
+11/15/2012	11	8:20PM	Miami 	Buffalo	open
+11/18/2012	11	4:15PM	San Diego 	Denver	open
+11/18/2012	11	1:00PM	Cinncinati 	Kansas City	open
+11/18/2012	11	1:00PM	Cleveland 	Dallas	open
+11/18/2012	11	1:00PM	Arizona 	Atlanta	open
+11/18/2012	11	1:00PM	Green Bay 	Detroit	open
+11/18/2012	11	1:00PM	Tampa Bay 	Carolina	open
+11/18/2012	11	1:00PM	Indianapolis 	New England	open
+11/18/2012	11	4:05PM	New Orleans 	Oakland	open
+11/18/2012	11	1:00PM	NY Jets 	St. Louis	open
+11/18/2012	11	1:00PM	Philadelphia 	Washington	open
+11/18/2012	11	8:20PM	Baltimore 	Pittsburgh	open
+11/18/2012	11	1:00PM	Jacksonville 	Houston	open
+11/19/2012	11	8:30PM	Chicago 	San Francisco	open
+11/22/2012	12	4:15PM	Washington 	Dallas	open
+11/22/2012	12	8:20PM	New England 	NY Jets	open
+11/22/2012	12	1:23PM	Houston 	Detroit	open
+11/25/2012	12	1:00PM	Minnesota 	Chicago	open
+11/25/2012	12	1:00PM	Oakland 	Cinncinati	open
+11/25/2012	12	1:00PM	Pittsburgh 	Cleveland	open
+11/25/2012	12	1:00PM	Atlanta 	Tampa Bay	open
+11/25/2012	12	4:15PM	St. Louis 	Arizona	open
+11/25/2012	12	4:05PM	Baltimore 	San Diego	open
+11/25/2012	12	1:00PM	Denver 	Kansas City	open
+11/25/2012	12	1:00PM	Buffalo 	Indianapolis	open
+11/25/2012	12	1:00PM	Seattle 	Miami	open
+11/25/2012	12	8:20PM	Green Bay 	NY Giants	open
+11/25/2012	12	1:00PM	Tennessee 	Jacksonville	open
+11/25/2012	12	4:15PM	San Francisco 	New Orleans	open
+11/26/2012	12	8:30PM	Carolina 	Philadelphia	open
+11/29/2012	13	8:20PM	New Orleans 	Atlanta	open
+12/2/2012	13	1:00PM	Seattle 	Chicago	open
+12/2/2012	13	1:00PM	Jacksonville 	Buffalo	open
+12/2/2012	13	4:05PM	Tampa Bay 	Denver	open
+12/2/2012	13	4:15PM	Cinncinati 	San Diego	open
+12/2/2012	13	1:00PM	Carolina 	Kansas City	open
+12/2/2012	13	8:20PM	Philadelphia 	Dallas	open
+12/2/2012	13	1:00PM	New England 	Miami	open
+12/2/2012	13	1:00PM	Arizona 	NY Jets	open
+12/2/2012	13	1:00PM	Indianapolis 	Detroit	open
+12/2/2012	13	1:00PM	Minnesota 	Green Bay	open
+12/2/2012	13	4:15PM	Cleveland 	Oakland	open
+12/2/2012	13	1:00PM	San Francisco 	St. Louis	open
+12/2/2012	13	4:15PM	Pittsburgh 	Baltimore	open
+12/2/2012	13	1:00PM	Houston 	Tennessee	open
+12/3/2012	13	8:30PM	NY Giants 	Washington	open
+12/6/2012	14	8:20PM	Denver 	Oakland	open
+12/9/2012	14	4:05PM	Miami 	San Francisco	open
+12/9/2012	14	1:00PM	Dallas 	Cinncinati	open
+12/9/2012	14	1:00PM	St. Louis 	Buffalo	open
+12/9/2012	14	1:00PM	Kansas City 	Cleveland	open
+12/9/2012	14	1:00PM	Philadelphia 	Tampa Bay	open
+12/9/2012	14	1:00PM	Tennessee 	Indianapolis	open
+12/9/2012	14	4:15PM	New Orleans 	NY Giants	open
+12/9/2012	14	1:00PM	NY Jets 	Jacksonville	open
+12/9/2012	14	8:20PM	Detroit 	Green Bay	open
+12/9/2012	14	1:00PM	Atlanta 	Carolina	open
+12/9/2012	14	1:00PM	Baltimore 	Washington	open
+12/9/2012	14	4:15PM	Arizona 	Seattle	open
+12/9/2012	14	1:00PM	San Diego 	Pittsburgh	open
+12/9/2012	14	1:00PM	Chicago 	Minnesota	open
+12/10/2012	14	8:30PM	Houston 	New England	open
+12/13/2012	15	8:20PM	Cinncinati 	Philadelphia	open
+12/16/2012	15	1:00PM	Green Bay 	Chicago	open
+12/16/2012	15	4:05PM	Seattle 	Buffalo	open
+12/16/2012	15	1:00PM	Washington 	Cleveland	open
+12/16/2012	15	4:05PM	Detroit 	Arizona	open
+12/16/2012	15	4:05PM	Carolina 	San Diego	open
+12/16/2012	15	4:15PM	Pittsburgh 	Dallas	open
+12/16/2012	15	1:00PM	Jacksonville 	Miami	open
+12/16/2012	15	1:00PM	NY Giants 	Atlanta	open
+12/16/2012	15	8:20PM	San Francisco 	New England	open
+12/16/2012	15	4:15PM	Kansas City 	Oakland	open
+12/16/2012	15	1:00PM	Minnesota 	St. Louis	open
+12/16/2012	15	1:00PM	Denver 	Baltimore	open
+12/16/2012	15	1:00PM	Tampa Bay 	New Orleans	open
+12/16/2012	15	1:00PM	Indianapolis 	Houston	open
+12/17/2012	15	8:30PM	NY Jets 	Tennessee	open
+12/22/2012	16	8:30PM	Atlanta 	Detroit	open
+12/23/2012	16	4:05PM	Cleveland 	Denver	open
+12/23/2012	16	1:00PM	St. Louis 	Tampa Bay	open
+12/23/2012	16	4:15PM	Chicago 	Arizona	open
+12/23/2012	16	1:00PM	Indianapolis 	Kansas City	open
+12/23/2012	16	1:00PM	New Orleans 	Dallas	open
+12/23/2012	16	1:00PM	Buffalo 	Miami	open
+12/23/2012	16	1:00PM	Washington 	Philadelphia	open
+12/23/2012	16	1:00PM	New England 	Jacksonville	open
+12/23/2012	16	8:20PM	San Diego 	NY Jets	open
+12/23/2012	16	1:00PM	Tennessee 	Green Bay	open
+12/23/2012	16	1:00PM	Oakland 	Carolina	open
+12/23/2012	16	1:00PM	NY Giants 	Baltimore	open
+12/23/2012	16	4:15PM	San Francisco 	Seattle	open
+12/23/2012	16	1:00PM	Cinncinati 	Pittsburgh	open
+12/23/2012	16	1:00PM	Minnesota 	Houston	open
+12/30/2012	17	4:15PM	Arizona 	San Francisco	open
+12/30/2012	17	1:00PM	Baltimore 	Cinncinati	open
+12/30/2012	17	1:00PM	NY Jets 	Buffalo	open
+12/30/2012	17	4:15PM	Kansas City 	Denver	open
+12/30/2012	17	4:15PM	Oakland 	San Diego	open
+12/30/2012	17	1:00PM	Houston 	Indianapolis	open
+12/30/2012	17	1:00PM	Tampa Bay 	Atlanta	open
+12/30/2012	17	1:00PM	Philadelphia 	NY Giants	open
+12/30/2012	17	1:00PM	Chicago 	Detroit	open
+12/30/2012	17	1:00PM	Miami 	New England	open
+12/30/2012	17	1:00PM	Dallas 	Washington	open
+12/30/2012	17	1:00PM	Carolina 	New Orleans	open
+12/30/2012	17	4:15PM	St. Louis 	Seattle	open
+12/30/2012	17	1:00PM	Cleveland 	Pittsburgh	open
+12/30/2012	17	1:00PM	Jacksonville 	Tennessee	open
+12/30/2012	17	1:00PM	Green Bay 	Minnesota	open

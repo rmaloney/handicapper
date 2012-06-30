@@ -1,61 +1,64 @@
 
-
-<%= form_for(@play) do |f| %>
-	<% if @play.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
-
-      <ul>
-      <% @play.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
 <div class="span8">
+  <%= form_for(@play) do |f| %>
+  	<% if @play.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
 
-	<!-- Display information about the game !-->
-
-	<h3> Make a play </h3>  
-	<!-- Information displayed in this form is related to the play being made on the game !-->
-	 
-	<p>  <%= f.hidden_field(:game_id, :value => @game.id) %></p>
-    <p>  <%= f.hidden_field(:user_id, :value => current_user.id ) %></p>
-    
-    <div class="controls">
-    	<%= f.label :selection %>
-    	<label> Totals Bettings </label>
-    	<label class="radio">
-	    	<%= f.radio_button :selection, "Under" %>
-	    	Under
-	    </label>
-    	
-    	<label class="radio">
-    		<%= f.radio_button :selection, "Over" %>
-    		Over
-    	</label>
-    </div>
-
-    <div class="controls">
-    	<label> Pointspread Betting </label>
-    	<label class="radio">
-			<%= f.radio_button :selection, "Favorite" %>
-			<%= @game.favorite + "-#{@game.line}" %>
-		</label>
-
-		<label class="radio">
-			<%= f.radio_button :selection, "Underdog" %>
-			<%= @game.underdog+ "+#{@game.line}" %>
-		</label>
-    </div>
+        <ul>
+        <% @play.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
 
-    <%= f.submit "Submit", :class => "btn btn-success" %>
 
-<% end %>
-    	
-    
+  	<!-- Display information about the game !-->
+
+  	<h3> Make a play: <%= @game.visitor_team + " @ " + @game.home_team %> </h3>  
+  	<!-- Information displayed in this form is related to the play being made on the game !-->
+   <br/>
+   <%= f.hidden_field(:game_id, :value => @game.id) %>
+   <%= f.hidden_field(:user_id, :value => current_user.id ) %>
+      
+
+      <div class="controls">
+   
+      	<label> Totals Betting </label>
+      	<label class="radio">
+  	    	<%= f.radio_button :selection, "Under" %>
+  	    	<%= "Under #{@game.total}" %>
+  	    </label>
+      	
+      	<label class="radio">
+      		<%= f.radio_button :selection, "Over" %>
+      		<%= "Over #{@game.total}" %>
+      	</label>
+      </div>
+
+      <br/>
+      <div class="controls">
+      	<label> Pointspread Betting </label>
+      	<label class="radio">
+    			<%= f.radio_button :selection, "Favorite" %>
+    			<%= @game.favorite + " -#{@game.line}" %>
+  		  </label>
+
+    		<label class="radio">
+    			<%= f.radio_button :selection, "Underdog" %>
+    			<%= @game.underdog+ " +#{@game.line}" %>
+    		</label>
+      </div>
+
+      <br/>
+
+      <%= f.submit "Submit", :class => "btn btn-success" %>
+
+  <% end %>
+      	
+      
 
    
 </div>

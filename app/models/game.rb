@@ -52,4 +52,22 @@ class Game < ActiveRecord::Base
 	def game_title
 		"#{home_team} vs. #{visitor_team}"
 	end
+
+	#formats underdog and favorite correctly in views (Capitalizes if home team)
+	def index_favorite
+		if home_team == favorite
+	        home_team.upcase
+	    else
+	    	favorite
+	    end
+	end
+
+	def index_underdog
+		if home_team == underdog
+	        underdog.upcase
+	    else
+	    	underdog
+	    end
+	end
+
 end

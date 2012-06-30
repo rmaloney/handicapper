@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
 
+  before_filter :authenticate_user!
   before_filter :get_user
   # GET /games
   # GET /games.json

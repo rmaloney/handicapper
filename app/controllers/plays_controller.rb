@@ -1,5 +1,6 @@
 class PlaysController < ApplicationController
 
+	before_filter :authenticate_user!
 	#before_filter :get_game, :except => :index
 
 	def index

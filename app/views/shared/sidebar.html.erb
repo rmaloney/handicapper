@@ -1,0 +1,28 @@
+ <div class="span3">
+              <% if user_signed_in? %>  
+                  <p class="pull-right"> <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+                  <p class="">Signed in as <%= current_user.email %>.</p>  
+                  
+                <% else %>  
+                  <p> </p>  
+              <% end %> 
+          <div class="well sidebar-nav" id="sidebar">
+            <ul class="nav nav-list">
+              <li class="nav-header">Plays</li>
+              <li class="active"><i class="icon-user"></i><a href="/plays">My Plays</a></li>
+              <li><a href="#">Make a Play</a></li>
+              <li><a href="#">Stats/Results</a></li>
+
+              <li class="nav-header"> Games</li>
+              <li><a href="/games">Current Lines</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Schedule</a></li>
+
+              <li class="nav-header"> News </li>
+              <li><a href="#"> Injury </li>
+              <li><a href="#"> Weather </li>
+              <li><a href="#"> Latest </li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->

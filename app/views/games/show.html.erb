@@ -1,47 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Week:</b>
-  <%= @game.week %>
-</p>
+<div class="span6">
+  <h2 class="red"> Matchup Details </h2>
 
-<p>
-  <b>Home team:</b>
-  <%= @game.home_team %>
-</p>
 
-<p>
-  <b>Visitor team:</b>
-  <%= @game.visitor_team %>
-</p>
+  <span><h3><%= @game.visitor_team %>  at   <%= @game.home_team %> </h3></span>
+  <br/>
 
-<p>
-  <b>Favorite:</b>
-  <%= @game.favorite %>
-</p>
+  <h4> <%= @game.start_date.strftime('%B %d,'+'%Y') %> </h4> <br/>
+  <h4> Kickoff: <%=  @game.kickoff %> </h4>
+  <br/>
+  
+  <strong> <p>Favorite: <%= "#{@game.favorite}  (-#{@game.line}) " %> </p></strong>
+  <strong> Total: <%= @game.total %> </strong>
 
-<p>
-  <b>Line:</b>
-  <%= @game.line %>
-</p>
 
-<p>
-  <b>Total:</b>
-  <%= @game.total %>
-</p>
+ 
 
-<p>
-  <b>Kickoff:</b>
-  <%= @game.kickoff %>
-</p>
+  <p><%= hidden_field(:game_id, @game.id) %></p>
 
-<p>
-  <b>Status:</b>
-  <%= @game.status %>
-</p>
+  
+  <%= button_to "Make a play on this game", new_play_path, :class => "btn btn-primary", :method => "get"  %>
+  <br/>
+  <% if can? :update, @game %>
+    <%= link_to 'Edit', edit_game_path(@game) %> |
+  <% end %>
 
-<p><%= hidden_field(:game_id, @game.id) %></p>
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
-<%= link_to "Make a play on this game", new_play_path  %>
+  <%= link_to 'Back', games_path %>
+</div>

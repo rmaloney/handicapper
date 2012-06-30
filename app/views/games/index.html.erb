@@ -1,44 +1,32 @@
 
-    <h1>Games</h1>
+    <h1>Current Matchups</h1>
+    <br/>
 
-    <table width="80%" class="table">
+    <table class="table table-bordered table-condensed" width="35%">
       <tr>
-       
-        <th>Home </th>
-        <th>Visitor </th>
-        <th> Favorite </th>
-        <th>Line</th>
+        <th>Favorite </th>
+        <th>Underdog </th>
         <th>Total</th>
-      
-        
-       
-        <th></th>
-        <th></th>
         <th></th>
       </tr>
 
-    <% @games.each do |game| %>
-      <tr>
-        
-        <td><%= game.home_team %></td>
-        <td><%= game.visitor_team %> </td>
-        <td><%= game.favorite %></td>
-        <td><%= game.line %></td>
-        <td><%= game.total %></td>
-       
-    
-        
-        
-        <td><%= link_to 'Details', game, :class => "btn btn-primary" %>
+        <% @games.each do |game| %>
+          <tr>
+            
+            <td><%= game.index_favorite + " (- #{game.line})"  %></td>
+            <td><%= game.index_underdog %> </td>
+            <td><%= game.total %></td>
+           
+            <td><%= link_to 'Details', game, :class => "btn btn-primary" %>
 
-        <% if can? :update, game %>
-            <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
-           <%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
-        <% end %>
-        </td>
-    </tr>
-  
-    <% end %>   
+            <% if can? :update, game %>
+                <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
+                <%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
+            <% end %>
+            </td>
+        </tr>
+      
+        <% end %>   
     </table>
 
     <br />
