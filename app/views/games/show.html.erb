@@ -21,9 +21,11 @@
 
   
   <%= button_to "Make a play on this game", new_play_path, :class => "btn btn-primary", :method => "get"  %>
+
   <br/>
   <% if can? :update, @game %>
-    <%= link_to 'Edit', edit_game_path(@game) %> |
+    <%= link_to 'Edit', edit_game_path(@game) %> 
+    <%= button_to "Results for this game", new_result_path, :class => "btn btn-primary", :method => "get"  %>
   <% end %>
 
   <%= link_to 'Back', games_path %>

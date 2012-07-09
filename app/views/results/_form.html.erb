@@ -1,0 +1,36 @@
+<div class="span8">
+	<%= form_for(@result) do |f| %>
+  	<% if @result.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@result.errors.count, "error") %> prohibited this result from being saved:</h2>
+
+        <ul>
+        <% @result.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h3>Add Results: <%= @game.visitor_team + " @ " + @game.home_team %> </h3>  
+  	<!-- Information displayed in this form is related to the play being made on the game !-->
+   <br/>
+   <%= f.hidden_field(:game_id, :value => @game.id) %>
+
+    <div class="controls">
+   		<label> <%= "#{@game.favorite}" %></label>
+      	<%= f.text_field :favorite_score %>
+ 	</div>
+
+ 	<div class="controls">
+ 		<label> <%= "#{@game.underdog}" %></label>
+      	<%= f.text_field :underdog_score %>
+  	</div>
+
+  <br/>
+
+      <%= f.submit "Submit", :class => "btn btn-success" %>
+
+  <% end %>
+</div><!--span -->
+    

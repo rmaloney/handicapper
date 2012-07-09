@@ -47,6 +47,16 @@ class PlaysController < ApplicationController
       	end
   	end
 
+  	def process_results
+  		@plays = Play.where(:status => "Open")
+  		@plays.each do |play|
+  			play.update_result
+  		end
+
+  		respond_to do |format|
+  			format.html {redirect_to root_url :notice => 'Plays have been processed and standings updated'}
+  		end
+  	end
 
 
   	def destroy

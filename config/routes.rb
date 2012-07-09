@@ -10,7 +10,7 @@ Handicapper::Application.routes.draw do
   match "plays/:id" => "plays#show", :via => :get
 
   resources :games 
-
+  resources :results
  
 
  #match 'plays' => 'plays#index', :as => 'plays'

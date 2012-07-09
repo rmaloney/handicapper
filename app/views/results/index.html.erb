@@ -1,0 +1,30 @@
+<h1>Results</h1>
+    <br/>
+
+    <table class="table table-bordered table-condensed" width="35%">
+      <tr>
+        <th>Favorite </th>
+        <th>Underdog </th>
+       
+        <th></th>
+      </tr>
+
+        <% @results.each do |result| %>
+          <tr>
+            
+            <td><%= result.game.index_favorite + " (- #{result.game.line})" + " #{result.favorite_score}" %></td>
+            <td><%= result.game.index_underdog + " #{result.underdog_score} " %> </td>
+            <td>Covers: <%= result.line_result + ", " + result.total_result  %> </td>
+          
+           
+            <td><%= link_to 'Details', result, :class => "btn btn-primary" %>
+
+            <% if can? :update, result %>
+                <%= link_to 'Edit', edit_result_path(result), :class => "btn " %>
+                <%= link_to 'Delete', result, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
+            <% end %>
+            </td>
+        </tr>
+      
+        <% end %>   
+    </table>
