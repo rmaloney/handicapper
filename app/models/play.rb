@@ -12,17 +12,17 @@ class Play < ActiveRecord::Base
 		choice = self.selection
 
 		resultset = [result.line_result, result.total_result]
-		puts resultset.inspect
-		# choice = "Under"
-		#["Favorite","Under"] OR ["Favorite", "Push"]
-		if choice = "Over" || "Under" && resultset[1] = "Push"
-			self.play_result = "Push"  
-		elsif choice = "Favorite" || "Underdog" && resultset[0] = "Push" 
-			self.play_result = "Push" 
+		totals = ["Over", "Under"]
+		lines = ["Favorite", "Underdog"]
+		
+		if lines.include?(choice) && resultset[0] == "Push"
+			self.update_attributes(:play_result => "Push")  
+		elsif totals.include?(choice) && resultset[1] == "Push" 
+			self.update_attributes(:play_result => "Push")  
 		elsif resultset.include?(choice)
-			self.play_result = "Win"  
+			self.update_attributes(:play_result => "Win") 
 		else
-			self.play_result ="Loss"
+			self.update_attributes(:play_result => "Loss") 
 		end
 
 		self.status = 'Closed'
