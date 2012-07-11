@@ -14,6 +14,7 @@
 
 #sidebar{
 	min-height: 400px;
+	margin-top: none;
 }
 
 
@@ -22,3 +23,6 @@
 .red { color: #750009;}
 .blue { color: #000046;}
 .green { color: #222601;}
+
+/* Adds grey border and 5px padding. Useful for debugging */
+.bordered {border: 1px solid #444;}

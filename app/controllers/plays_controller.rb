@@ -69,6 +69,10 @@ class PlaysController < ApplicationController
   		end
   	end
 
+
+
+  	
+
   	private
 
   	def get_game

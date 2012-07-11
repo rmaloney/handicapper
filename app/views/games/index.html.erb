@@ -1,5 +1,5 @@
 
-    <h1>Current Matchups</h1>
+    <h1 class="red">Current Matchups</h1>
     <br/>
 
     <table class="table table-bordered table-condensed" width="35%">
@@ -22,6 +22,7 @@
             <% if can? :update, game %>
                 <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
                 <%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
+                
             <% end %>
             </td>
         </tr>
@@ -31,4 +32,4 @@
 
     <br />
 
-    <%= link_to 'New Game', new_game_path %>
+
