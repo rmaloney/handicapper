@@ -18,6 +18,10 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     
+
+    if current_user.has_play?(params[:id])
+      @message = "Yeah nigga"
+    end
     session[:game_id] = @game.id
     respond_to do |format|
       format.html # show.html.erb

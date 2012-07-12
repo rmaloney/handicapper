@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-
-  
+<%= @message %>
+ 
   <div class="pull-left">
     <h2 class="red"> Matchup Details </h2> 
 
@@ -26,7 +26,7 @@
 
 
 
-  <div class="pull-right">
+  <div class="span3 offset5">
     <%= button_to "Make a play on this game", new_play_path, :class => "btn btn-primary", :method => "get"  %>
 
     <br/>

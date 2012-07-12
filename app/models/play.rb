@@ -7,7 +7,6 @@ class Play < ActiveRecord::Base
 
 	# Find the result of the game the play was made on. 
 	# Update :play_result with Win, Loss or Push
-
 	def process
 		
 		game = self.game
@@ -36,25 +35,6 @@ class Play < ActiveRecord::Base
 
 
 
-		#delete once you get standings working
-	def self.standings_bak
-  		@plays = Play.where(:status => "Closed")
-
-  		
-
-  		@standings = Hash.new{|hash,key| hash[key] = []}
-
-  		@plays.each do |p|
-  			user_id = p.user_id
-  			@standings[:user] << user_id
-  			if p.play_result == "Win"
-  				@standings[:user][:wins] += 1
-  			elsif p.play_result == "Loss"
-  				@standings[:user][:losses]+= 1
-  			end
-  		end
-  		puts @standings.inspect
-	end
 
 	#Helper method to collect user emails and ids for Plays. Used to compute stats, standings, etc.
 	def self.emails
@@ -67,6 +47,8 @@ class Play < ActiveRecord::Base
 
 	end
 	
+		
+
 	#Callback function sets status of all newly created plays to 'Open'
 	def default_values
 		self.status ||= 'Open'

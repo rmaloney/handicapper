@@ -25,4 +25,17 @@ class User < ActiveRecord::Base
   	end		
 
   end
+
+
+  #checks to see if a user has a play on the existing game
+
+  def has_play?(game)
+    plays = self.plays.find_all_by_game_id(game)
+    if plays.length > 0
+      true
+    else
+      false
+    end
+  end
+
 end

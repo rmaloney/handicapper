@@ -15,6 +15,7 @@ class PlaysController < ApplicationController
 	def show
   		@play = Play.find(params[:id])
 
+      
   		respond_to do |format|
   			format.html 
   			format.json { render json: @play }
@@ -27,6 +28,9 @@ class PlaysController < ApplicationController
 	 	@play = Play.new
 	 	@game = Game.find(session[:game_id])
 
+    if current_user.has_play?(@game.id)
+      @existing_play = true
+    end
 	 	respond_to do |format|
 	      format.html # new.html.erb
 	      format.json { render json: @play }
@@ -35,6 +39,9 @@ class PlaysController < ApplicationController
 
 	def create
 	 	@play =Play.new(params[:play])
+
+    #do we already have a play for this game?
+   
 
 	 	respond_to do |format|
 	 		if @play.save
