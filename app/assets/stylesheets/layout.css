@@ -8,7 +8,15 @@
  *
  *
 */
+@font-face {
+    font-family: "Nevis";
+    src: url(nevis.ttf);
+}
 
+@font-face {
+    font-family: "Alte";
+    src: url(AlteHaasGroteskRegular.ttf);
+}
 
 /* Layout  */
 
@@ -20,7 +28,7 @@
 
 /* Utility Classes */
 
-.red { color: #750009;}
+.red { color: #920402; /*#750009;*/}
 .blue { color: #000046;}
 .green { color: #222601;}
 

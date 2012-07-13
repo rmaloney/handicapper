@@ -28,6 +28,7 @@ class PlaysController < ApplicationController
 	 	@play = Play.new
 	 	@game = Game.find(session[:game_id])
 
+    #do we already have a play for this game?
     if current_user.has_play?(@game.id)
       @existing_play = true
     end
@@ -39,9 +40,7 @@ class PlaysController < ApplicationController
 
 	def create
 	 	@play =Play.new(params[:play])
-
-    #do we already have a play for this game?
-   
+    @game = Game.find(params[:play][:game_id])
 
 	 	respond_to do |format|
 	 		if @play.save
@@ -51,38 +50,55 @@ class PlaysController < ApplicationController
 		        format.html { render action: "new" }
 		        format.json { render json: @play.errors, status: :unprocessable_entity }
 			end
-      	end
-  	end
+    end
+  end
 
-  	def process_results
-  		@plays = Play.where(:status => "Open")
-  		@plays.each do |play|
-  			play.update_result
-  		end
+  def edit
+    @play = Play.find(params[:id])
+    @game = Game.find(@play.game_id)
+  end
 
-  		respond_to do |format|
-  			format.html {redirect_to root_url :notice => 'Plays have been processed and standings updated'}
-  		end
-  	end
+  def update
+    @play = Play.find(params[:id])
+     @game = Game.find(@play.game_id)
+    respond_to do |format|
+      if @play.update_attributes(params[:play])
+        format.html { redirect_to @play, notice: 'Your play has been updated' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @play.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @play = Play.find(params[:id])
+    @play.destroy
+
+    respond_to do |format|
+      format.html {redirect_to(plays_url)}
+      format.json { head :no_content }
+    end
+  end
+
+    #this isnt live yet
+	def process_results
+		@plays = Play.where(:status => "Open")
+		@plays.each do |play|
+			play.update_result
+		end
+
+		respond_to do |format|
+			format.html {redirect_to root_url :notice => 'Plays have been processed and standings updated'}
+		end
+	end
+
+  private
+
+	def get_game
+		@game = Game.find(params[:game_id])
+	end
 
 
-  	def destroy
-  		@play = Play.find(params[:id])
-  		@play.destroy
-
-  		respond_to do |format|
-  			format.html {redirect_to(plays_url)}
-  			format.json { head :no_content }
-  		end
-  	end
-
-
-
-  	
-
-  	private
-
-  	def get_game
-  		@game = Game.find(params[:game_id])
-  	end
 end

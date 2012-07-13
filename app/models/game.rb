@@ -70,5 +70,13 @@ class Game < ActiveRecord::Base
 	    end
 	end
 
+	def home_team_logo
+		self.home_team + ".jpg"
+	end
+
+	def visitor_team_logo
+		self.visitor_team + ".jpg"
+	end
+
 
 end

@@ -8,11 +8,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bitter|Oswald' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag :application %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
     <%= csrf_meta_tag %>
-    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag :all %>
+
+    <script type="text/javascript">
+          $('li > a').click(function() {
+          $('li').removeClass();
+          $(this).parent().addClass('active');
+    });
+
+
+    </script>
+         
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -41,13 +51,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">RDF Handicapping <%= image_tag('football_ball.png') %></a>
+          <a class="brand" href="#">RDF Pick'em <%= image_tag('shield.png') %></a>
           <div class="nav-collapse">
             <ul class="nav pull-right">
               <li class="active"><a href="/games">About</a></li>
               <li><a href="#about">Standings</a></li>
-              <li ><a href="/users/edit">Account Settings</a></li>
-              
+              <li ><a href="/users/edit">Account</a></a></li>
             </ul>
 
             
@@ -64,7 +73,7 @@
           <div class="sidebar-nav" id="sidebar">
             <ul class="nav nav-list">
               <li class="nav-header">Plays</li>
-              <li class="active"><i class="icon-user"></i><a href="/plays">My Plays</a></li>
+              <li class=""><a href="/plays">My Plays</a></li>
               <li><a href="#">Stats/Results</a></li>
 
               <li class="nav-header"> Games</li>
@@ -78,10 +87,33 @@
               <li><a href="#"> Latest</a> </li>
             </ul>
           </div><!--/.well -->
-        </div><!--/spa -->  
-        <div class="span9">
+        </div><!--/span -->
+
+        
+          <!-- Main Content-->
+            <div id="user_nav" class="pull-right">  
+              <% if user_signed_in? %>  
+               Hello <%= current_user.handle %>.  
+                <%= link_to "Sign out", destroy_user_session_path %>  
+              <% else %>  
+                
+                <%= link_to "Sign in", new_user_session_path %>  
+              <% end %>  
+              
+              <br/>
+              <p> NFL Standings </p>
+              <p> NFL Stats     </p>
+
+            </div>  
+
+
+           
+         <!-- Yield the actions view here --> 
           <%= yield %>
-        </div>
+      
+
+
+          <!--right sidebar -->
 
      
       </div><!--/row-->

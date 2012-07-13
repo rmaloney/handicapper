@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   def has_play?(game)
     plays = self.plays.find_all_by_game_id(game)
     if plays.length > 0
-      true
+      plays
     else
       false
     end

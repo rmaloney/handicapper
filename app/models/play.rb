@@ -3,8 +3,17 @@ class Play < ActiveRecord::Base
 	belongs_to :game
 	has_one :result
 
-	before_save :default_values
+	#callbacks
+	before_create :default_values
 
+	#validation
+	validates :selection, :uniqueness => {:scope => :game_id}
+
+	#scopes
+	scope :closed, where(:status => "Closed")
+	scope :open, where(:status => "Open")
+	scope :instanceplays, lambda {|user| where("plays.instance_id = ?", user.instance_id)}
+	
 	# Find the result of the game the play was made on. 
 	# Update :play_result with Win, Loss or Push
 	def process
@@ -12,7 +21,6 @@ class Play < ActiveRecord::Base
 		game = self.game
 		result = game.result
 		choice = self.selection
-
 		resultset = [result.line_result, result.total_result]
 		totals = ["Over", "Under"]
 		lines = ["Favorite", "Underdog"]
@@ -28,7 +36,6 @@ class Play < ActiveRecord::Base
 			self.update_attributes(:play_result => "Loss")	
 		end
 
-		
 		self.status = 'Closed'
 	end
 

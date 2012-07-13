@@ -1,0 +1,43 @@
+
+ 
+  <div class="span6 offset2">
+    <div class="pull-left">
+      <h2 class="red"> Matchup Details </h2> 
+
+
+      <span><h3><%= @game.visitor_team %>  at   <%= @game.home_team %> </h3></span>
+      <br/>
+
+      <h4> <%= @game.start_date.strftime('%B %d,'+'%Y') %> </h4> <br/>
+      <h4> Kickoff: <%=  @game.kickoff %> </h4>
+      <br/>
+      
+      <strong> <p>Favorite: <%= "#{@game.favorite}  (-#{@game.line}) " %> </p></strong>
+      <strong> <p>Total: <%= @game.total %></p> </strong>
+
+      <br/>
+
+      <%= link_to 'Go Back', games_path %>
+    </div> 
+
+      <p><%= hidden_field(:game_id, @game.id) %></p>
+
+        <div class="pull-right">
+          <%= button_to "Make a play on this game", new_play_path, :class => "btn btn-primary", :method => "get"  %>
+          
+          <br/>
+          <% if can? :update, @game %>
+            
+            <%= button_to "Results for this game", new_result_path, :class => "btn btn-primary", :method => "get"  %>
+            <%= link_to 'Edit', edit_game_path(@game) %> 
+          <% end %>
+          <%= @message %>
+        </div>
+  </div>
+
+
+
+    
+
+
+  

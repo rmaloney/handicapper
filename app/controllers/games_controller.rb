@@ -7,6 +7,7 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
 
+    @play_count = Play.open.where(:user_id => current_user.id).length
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @games }
@@ -20,7 +21,7 @@ class GamesController < ApplicationController
     
 
     if current_user.has_play?(params[:id])
-      @message = "Yeah nigga"
+      @message = "You have a a pending play on this game."
     end
     session[:game_id] = @game.id
     respond_to do |format|
@@ -52,7 +53,7 @@ class GamesController < ApplicationController
 
     respond_to do |format|
       if @game.save
-        format.html { redirect_to @game, notice: 'Game was successfully created.' }
+        format.html { redirect_to @game, notice: 'Game created.' }
         format.json { render json: @game, status: :created, location: @game }
       else
         format.html { render action: "new" }

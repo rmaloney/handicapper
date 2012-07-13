@@ -1,16 +1,24 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <b>Home team:</b>
-  <%= @play.game.home_team %>
-</p>
 
-<p>
-  <b>Visitor team:</b>
-  <%= @play.game.visitor_team %>
-</p>
+<div class="span6 offset2">
+	<h3> Selection Details </h3>
 
-<p>
-<strong> Your Selection </strong>
-	<%= @play.selection %>
+	<br/>
+	<br/>
 
-</p>
+	<div class="details">
+	  
+	  <p><strong><%= @play.game.index_favorite + " (-#{@play.game.line})" + " vs. " + @play.game.index_underdog %>   </strong></p>
+
+	  <p><strong> Total: <%= @play.game.total %> </p> </strong>
+
+	  <p> <strong> Play last updated on: <%= @play.updated_at.localtime.strftime('%B %d, %Y %l:%M%P') %>  </p>
+	  
+
+		<p>
+		<strong> Your Selection: </strong>
+			<%= @play.selection %>
+
+		</p>
+
+	</div>
+</div>
