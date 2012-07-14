@@ -13,13 +13,6 @@
     <% end %>
 
 
-
-  	<!-- Display information about the game !-->
-
-   
-      <div class="span6">
-        <div class="row">
-
           <h3> Make a play </h3>
         	<h3 class="red"> <%= @game.index_favorite + "(-#{@game.line})" + " vs. " + @game.index_underdog %> </h3>  
           <%= link_to ' << Go Back', plays_path, :class => "pull-right" %>
@@ -30,7 +23,6 @@
             
 
             <div class="span3 controls">
-         
             	<label><strong> Totals Betting </strong></label>
             	<label class="radio">
         	    	<%= f.radio_button :selection, "Under" %>
@@ -41,30 +33,24 @@
             		<%= f.radio_button :selection, "Over" %>
             		<%= "Over #{@game.total}" %>
             	</label>
-
-
             </div>
 
           
             <div class="span3 controls">
-            	<label><strong> Pointspread Betting </strong> </label>
-            	<label class="radio">
-          			<%= f.radio_button :selection, "Favorite" %>
-          			<%= @game.favorite + " -#{@game.line}" %>
-        		  </label>
+              	<label><strong> Pointspread Betting </strong> </label>
+              	<label class="radio">
+            			<%= f.radio_button :selection, "Favorite" %>
+            			<%= @game.favorite + " -#{@game.line}" %>
+          		  </label>
 
-          		<label class="radio">
-          			<%= f.radio_button :selection, "Underdog" %>
-          			<%= @game.underdog+ " +#{@game.line}" %>
-          		</label>
+            		<label class="radio">
+            			<%= f.radio_button :selection, "Underdog" %>
+            			<%= @game.underdog+ " +#{@game.line}" %>
+            		</label>
 
-              <br/>
-              <%= f.submit "Submit", :class => "btn btn-success" %>
-    
-              
-
-
-      </div>
+                <br/>
+                <%= f.submit "Submit", :class => "btn btn-success" %>
+            </div>
 
       <br/>
 

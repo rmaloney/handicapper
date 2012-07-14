@@ -88,9 +88,24 @@
             </ul>
           </div><!--/.well -->
         </div><!--/span -->
-        <div class="span8">
+
         
-          
+          <!-- Main Content-->
+            <div id="user_nav" class="pull-right">  
+              <% if user_signed_in? %>  
+               Hello <%= current_user.handle %>.  
+                <%= link_to "Sign out", destroy_user_session_path %>  
+              <% else %>  
+                
+                <%= link_to "Sign in", new_user_session_path %>  
+              <% end %>  
+              
+              <br/>
+              <p> NFL Standings </p>
+              <p> NFL Stats     </p>
+
+            </div>  
+
 
            
          <!-- Yield the actions view here --> 
@@ -98,29 +113,9 @@
       
 
 
-        </div> <!--span-->
-
           <!--right sidebar -->
-          <div class="span2">
-            
-            <div id="user_nav" class="pull-right">  
-                <% if user_signed_in? %>  
-                 Hello <%= current_user.handle %>.  
-                  <%= link_to "Sign out", destroy_user_session_path %>  
-                <% else %>  
-                  
-                  <%= link_to "Sign in", new_user_session_path %>  
-                <% end %>  
-                
-                <br/>
-                <p> NFL Standings </p>
-                <p> NFL Stats     </p>
 
-            </div>  
-          </div>
-          
      
-        
       </div><!--/row-->
 
       <hr>

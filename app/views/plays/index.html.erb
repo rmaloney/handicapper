@@ -1,36 +1,36 @@
  
- <div class="span8">
+
    <h3>Your Plays</h3>
 
       <table width="65%" class="table table-bordered table-condensed">
+        <thead>
         <tr>
-         
+          <th> Week     </th>
           <th>Selection </th>
-         
-         
           <th>Home Team</th>
           <th>Visitor</th>
           <th></th>
         </tr>
+        </thead>
+        <tbody>
+          <% @plays.each do |play| %>
+            <tr>
+               <td> <%= play.game.week %> </td>        
+               <td> <%= play.selection %> </td>
+               <td> <%= play.game.home_team %> </td>
+               <td> <%= play.game.visitor_team %> </td>
 
-      <% @plays.each do |play| %>
-        <tr>
-          
-          
-           <td> <%= play.selection %> </td>
-           <td> <%= play.game.home_team %> </td>
-           <td> <%= play.game.visitor_team %> </td>
-
-          <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
-          <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>
-          <% if current_user.admin? %>
-            <%= link_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
-          <% end %>
-        </tr>
+              <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
+              <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>
+              <% if current_user.admin? %>
+                <%= link_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
+              <% end %>
+            </tr>
+        </tbody>
       <% end %>
       </table>
 
       <br />
 
       <%= link_to 'New Game', new_game_path %>
-  </div>
+ 

@@ -1,4 +1,4 @@
-<div class="span8">
+
 
     <p class="pull-right">
         <%= "You have #{@play_count} picks for this week" %>
@@ -6,9 +6,10 @@
     <h2 >Current Matchups</h2>
     <br/>
 
-    <table class="table table-bordered table-condensed" width="55%">
+    <table class="table table-bordered table-condensed table-striped" width="55%">
     <thead>
       <tr>
+        <th>Kickoff </th>
         <th>Favorite </th>
         <th>Underdog </th>
         <th>Total</th>
@@ -19,6 +20,7 @@
         <% @games.each do |game| %>
           <tr>
             
+            <td><%= game.kickoff %> </td>
             <td><%= game.index_favorite + " (-#{game.line})"  %></td>
             <td><%= game.index_underdog %> </td>
             <td><%= game.total %></td>
@@ -38,5 +40,4 @@
     </table>
 
     <br />
-</div>
 
