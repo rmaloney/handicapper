@@ -1,6 +1,6 @@
 
-<div class="span6 offset2">
-	<h3> Selection Details </h3>
+
+	<h2> Selection Details </h2>
 
 	<br/>
 	<br/>
@@ -9,9 +9,9 @@
 	  
 	  <p><strong><%= @play.game.index_favorite + " (-#{@play.game.line})" + " vs. " + @play.game.index_underdog %>   </strong></p>
 
-	  <p><strong> Total: <%= @play.game.total %> </p> </strong>
+	  <p><strong> Total: </strong> <%= @play.game.total %> </p> 
 
-	  <p> <strong> Play last updated on: <%= @play.updated_at.localtime.strftime('%B %d, %Y %l:%M%P') %>  </p>
+	  <p> <strong> Play last updated on: </strong> <%= @play.updated_at.localtime.strftime('%B %d, %Y %l:%M%P') %>   </p>
 	  
 
 		<p>
@@ -21,4 +21,3 @@
 		</p>
 
 	</div>
-</div>

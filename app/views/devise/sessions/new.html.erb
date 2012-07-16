@@ -2,23 +2,26 @@
 
 
 
-<div class="offset2">
+<div class="offset1">
+	<div class="span7 well">
+		<h2> Log In </h2>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			
+			
+				  <div><%= f.label :email %>
+				  <%= f.email_field :email %></div>
 
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-		
-		<h3> Log In </h3>
-			  <div><%= f.label :email %>
-			  <%= f.email_field :email %></div>
+				  <div><%= f.label :password %>
+				  <%= f.password_field :password %></div>
 
-			  <div><%= f.label :password %>
-			  <%= f.password_field :password %></div>
+				  <% if devise_mapping.rememberable? -%>
+				    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+				  <% end -%>
+			
+		  			<div><%= f.submit "Sign in", :class => "btn btn-success" %></div>
+		<% end %>
+		<%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+	</div>
 
-			  <% if devise_mapping.rememberable? -%>
-			    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-			  <% end -%>
-		
-	  <div><%= f.submit "Sign in", :class => "btn btn-success" %></div>
-	<% end %>
-
-	 <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+	 
 </div>

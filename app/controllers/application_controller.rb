@@ -2,10 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   around_filter :catch_not_found, :catch_404
 
-  # rescue_from CanCan::AccessDenied do |exception|
-	#  flash[:error] = exception.message
-	#  redirect_to root_url
-  # end
+  rescue_from CanCan::AccessDenied do |exception|
+	flash[:error] = exception.message
+	redirect_to root_url
+  end
   
   	
 

@@ -23,7 +23,7 @@
               <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
               <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>
               <% if current_user.admin? %>
-                <%= link_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
+                <%= button_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
               <% end %>
             </tr>
         </tbody>

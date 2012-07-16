@@ -1,37 +1,39 @@
 
 
-  <div class="offset2">
+  <div class="offset1">
     
-      <h3> Edit your account </h3>
+      <h2> Edit your account </h2>
 
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-      <%= devise_error_messages! %>
+    <div class="well">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="clearfix">
-        <%= f.label :email %>
-        <%= f.email_field :email %>
-      </div>
+        <div class="clearfix">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
 
-      <div class="clearfix">
-        <%= f.label :password %> 
-        <%= f.password_field :password, :autocomplete => "off" %>
-      </div>
+        <div class="clearfix">
+          <%= f.label :password %> 
+          <%= f.password_field :password, :autocomplete => "off" %>
+        </div>
 
-      <div class="clearfix">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
-      </div>
+        <div class="clearfix">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
 
-      <div class="clearfix">
-        <%= f.label :current_password %> 
-        <%= f.password_field :current_password %>
-      </div>
-      <%= f.submit "Update", :class => "btn btn-success" %>
+        <div class="clearfix">
+          <%= f.label :current_password %> 
+          <%= f.password_field :current_password %>
+        </div>
+        <%= f.submit "Update", :class => "btn btn-success" %>
 
-   
-    <% end %>
+     
+      <% end %>
 
     <%= link_to "<< Go Back", :back %>
+    </div>
   </div>
 
 

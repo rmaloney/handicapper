@@ -10,6 +10,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bitter|Oswald' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag :application %>
+    <%= javascript_include_tag :all %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
     <%= csrf_meta_tag %>
     
@@ -101,9 +102,9 @@
         </div> <!--span-->
 
           <!--right sidebar -->
-          <div class="span2">
+          <div class="span2 well">
             
-            <div id="user_nav" class="pull-right">  
+            <div id="user_nav">  
                 <% if user_signed_in? %>  
                  Hello, <%= current_user.handle %> <br/> 
                   <%= link_to "Sign out", destroy_user_session_path %>  
@@ -114,8 +115,13 @@
                 
                 <br/>
                 <br>
-                <p> NFL Standings </p>
-                <p> NFL Stats     </p>
+                <p>
+                    <%= "You have #{pluralize(@play_count,'pick')}  for this week" %> <br/><br/>
+                    <%= @remaining %> Picks left to submit
+                </p>
+
+                <a href="#"> NFL Standings </a><br/>
+                <a href="#"> NFL Stats     </a>
 
             </div>  
           </div>

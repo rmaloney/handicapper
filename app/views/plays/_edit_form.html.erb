@@ -1,5 +1,3 @@
-
-
   <%= form_for(@play) do |f| %>
   	<% if @play.errors.any? %>
       <div class="alert">
@@ -14,13 +12,9 @@
     <% end %>
 
 
-
-  	<!-- Display information about the game !-->
-
-    <fieldset>
-      <legend> Edit your play </legend>
+    <h2> Edit your play <h2>
         	<h3 class="red"> <%= @play.game.index_favorite + "(-#{@play.game.line})" + " vs. " + @play.game.index_underdog %> </h3>  
-          <%= link_to ' << Go Back', plays_path %> | <%= link_to 'Show', @play %> 
+          
 
 
 
@@ -31,8 +25,7 @@
          <%= f.hidden_field(:user_id, :value => current_user.id ) %>
             
 
-            <div class="controls">
-         
+            <div class="span3 controls">
             	<label><strong> Totals Betting </strong></label>
             	<label class="radio">
         	    	<%= f.radio_button :selection, "Under" %>
@@ -43,12 +36,9 @@
             		<%= f.radio_button :selection, "Over" %>
             		<%= "Over #{@game.total}" %>
             	</label>
-
-
             </div>
 
-            <br/>
-            <div class="controls">
+            <div class="span3 controls">
             	<label><strong> Pointspread Betting </strong> </label>
             	<label class="radio">
           			<%= f.radio_button :selection, "Favorite" %>
@@ -59,11 +49,13 @@
           			<%= f.radio_button :selection, "Underdog" %>
           			<%= @game.underdog+ " +#{@game.line}" %>
           		</label>
-    </fieldset>
+    
               <%= f.submit "Submit", :class => "btn btn-success" %>
-
-
-      </div>
+              <br/>
+              <br/>
+              <%= link_to ' << Go Back', plays_path %> | <%= link_to 'Show', @play %> 
+            </div>
+     
 
       <br/>
 

@@ -1,40 +1,40 @@
 
 
-    <p class="pull-right">
-        <%= "You have #{pluralize(@play_count,'pick')}  for this week" %> </br>
-        <%= @remaining %> Picks left to submit
-    </p>
-
+    
     <h2>Current Lines</h2>
     <br/>
 
     <table class="table table-bordered table-condensed table-striped" width="55%">
     <thead>
       <tr>
+        <th> Day </th>
         <th>Kickoff </th>
         <th>Favorite </th>
         <th>Underdog </th>
         <th>Total</th>
         <th></th>
+
       </tr>
     </thead>
     <tbody>
         <% @games.each do |game| %>
           <tr>
             
+            <td><%= game.start_date.strftime('%A') %> </td>
             <td><%= game.kickoff %> </td>
             <td><%= game.index_favorite + " (-#{game.line})"  %></td>
             <td><%= game.index_underdog %> </td>
             <td><%= game.total %></td>
            
-            <td><%= link_to 'Details', game, :class => "btn btn-primary" %>
+            <td>
+                <%= link_to 'Details', game, :class => "btn btn-primary" %>
 
             <% if can? :update, game %>
                 <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
-                <%= link_to 'Delete', game, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %>
-                
             <% end %>
+                
             </td>
+
         </tr>
         
         <% end %>  
