@@ -1,0 +1,240 @@
+9/13/2012	2	8:20PM	Chicago 	Green Bay	open	n/a	0	0
+9/16/2012	2	8:20PM	Detroit 	San Francisco	open	n/a	0	0
+9/16/2012	2	1:00PM	Cleveland 	Cinncinati	open	n/a	0	0
+9/16/2012	2	1:00PM	Kansas City 	Buffalo	open	n/a	0	0
+9/16/2012	2	4:15PM	Tennessee 	San Diego	open	n/a	0	0
+9/16/2012	2	1:00PM	Minnesota 	Indianapolis	open	n/a	0	0
+9/16/2012	2	4:15PM	Oakland 	Miami	open	n/a	0	0
+9/16/2012	2	1:00PM	Baltimore 	Philadelphia	open	n/a	0	0
+9/16/2012	2	1:00PM	Tampa Bay 	NY Giants	open	n/a	0	0
+9/16/2012	2	1:00PM	Houston 	Jacksonville	open	n/a	0	0
+9/16/2012	2	1:00PM	New Orleans 	Carolina	open	n/a	0	0
+9/16/2012	2	1:00PM	Arizona 	New England	open	n/a	0	0
+9/16/2012	2	4:05PM	Washington 	St. Louis	open	n/a	0	0
+9/16/2012	2	4:05PM	Dallas 	Seattle	open	n/a	0	0
+9/16/2012	2	4:15PM	NY Jets 	Pittsburgh	open	n/a	0	0
+9/17/2012	2	8:30PM	Denver 	Atlanta	open	n/a	0	0
+9/20/2012	3	8:20PM	NY Giants 	Carolina	open	n/a	0	0
+9/23/2012	3	1:00PM	St. Louis 	Chicago	open	n/a	0	0
+9/23/2012	3	4:15PM	Houston 	Denver	open	n/a	0	0
+9/23/2012	3	1:00PM	Buffalo 	Cleveland	open	n/a	0	0
+9/23/2012	3	4:05PM	Philadelphia 	Arizona	open	n/a	0	0
+9/23/2012	3	4:05PM	Atlanta 	San Diego	open	n/a	0	0
+9/23/2012	3	1:00PM	Jacksonville 	Indianapolis	open	n/a	0	0
+9/23/2012	3	1:00PM	Tampa Bay 	Dallas	open	n/a	0	0
+9/23/2012	3	1:00PM	NY Jets 	Miami	open	n/a	0	0
+9/23/2012	3	4:15PM	Pittsburgh 	Oakland	open	n/a	0	0
+9/23/2012	3	8:20PM	New England 	Baltimore	open	n/a	0	0
+9/23/2012	3	1:00PM	Cinncinati 	Washington	open	n/a	0	0
+9/23/2012	3	1:00PM	Kansas City 	New Orleans	open	n/a	0	0
+9/23/2012	3	1:00PM	Detroit 	Tennessee	open	n/a	0	0
+9/23/2012	3	1:00PM	San Francisco 	Minnesota	open	n/a	0	0
+9/24/2012	3	8:30PM	Green Bay 	Seattle	open	n/a	0	0
+9/27/2012	4	8:20PM	Cleveland 	Baltimore	open	n/a	0	0
+9/30/2012	4	1:00PM	New England 	Buffalo	open	n/a	0	0
+9/30/2012	4	4:05PM	Oakland 	Denver	open	n/a	0	0
+9/30/2012	4	4:15PM	Washington 	Tampa Bay	open	n/a	0	0
+9/30/2012	4	4:05PM	Miami 	Arizona	open	n/a	0	0
+9/30/2012	4	1:00PM	San Diego 	Kansas City	open	n/a	0	0
+9/30/2012	4	8:20PM	NY Giants 	Philadelphia	open	n/a	0	0
+9/30/2012	4	1:00PM	Carolina 	Atlanta	open	n/a	0	0
+9/30/2012	4	4:05PM	Cinncinati 	Jacksonville	open	n/a	0	0
+9/30/2012	4	1:00PM	San Francisco 	NY Jets	open	n/a	0	0
+9/30/2012	4	1:00PM	Minnesota 	Detroit	open	n/a	0	0
+9/30/2012	4	4:15PM	New Orleans 	Green Bay	open	n/a	0	0
+9/30/2012	4	1:00PM	Seattle 	St. Louis	open	n/a	0	0
+9/30/2012	4	1:00PM	Tennessee 	Houston	open	n/a	0	0
+10/1/2012	4	8:30PM	Chicago 	Dallas	open	n/a	0	0
+10/4/2012	5	8:20PM	Arizona 	St. Louis	open	n/a	0	0
+10/7/2012	5	4:15PM	Buffalo 	San Francisco	open	n/a	0	0
+10/7/2012	5	1:00PM	Miami 	Cinncinati	open	n/a	0	0
+10/7/2012	5	1:00PM	Baltimore 	Kansas City	open	n/a	0	0
+10/7/2012	5	1:00PM	Green Bay 	Indianapolis	open	n/a	0	0
+10/7/2012	5	1:00PM	Cleveland 	NY Giants	open	n/a	0	0
+10/7/2012	5	4:05PM	Chicago 	Jacksonville	open	n/a	0	0
+10/7/2012	5	4:05PM	Seattle 	Carolina	open	n/a	0	0
+10/7/2012	5	4:15PM	Denver 	New England	open	n/a	0	0
+10/7/2012	5	1:00PM	Atlanta 	Washington	open	n/a	0	0
+10/7/2012	5	8:20PM	San Diego 	New Orleans	open	n/a	0	0
+10/7/2012	5	1:00PM	Philadelphia 	Pittsburgh	open	n/a	0	0
+10/7/2012	5	1:00PM	Tennessee 	Minnesota	open	n/a	0	0
+10/8/2012	5	8:30PM	Houston 	NY Jets	open	n/a	0	0
+10/11/2012	6	8:20PM	Pittsburgh 	Tennessee	open	n/a	0	0
+10/14/2012	6	4:15PM	NY Giants 	San Francisco	open	n/a	0	0
+10/14/2012	6	1:00PM	Cinncinati 	Cleveland	open	n/a	0	0
+10/14/2012	6	1:00PM	Kansas City 	Tampa Bay	open	n/a	0	0
+10/14/2012	6	4:05PM	Buffalo 	Arizona	open	n/a	0	0
+10/14/2012	6	1:00PM	St. Louis 	Miami	open	n/a	0	0
+10/14/2012	6	1:00PM	Detroit 	Philadelphia	open	n/a	0	0
+10/14/2012	6	1:00PM	Oakland 	Atlanta	open	n/a	0	0
+10/14/2012	6	1:00PM	Indianapolis 	NY Jets	open	n/a	0	0
+10/14/2012	6	1:00PM	Dallas 	Baltimore	open	n/a	0	0
+10/14/2012	6	4:15PM	Minnesota 	Washington	open	n/a	0	0
+10/14/2012	6	4:05PM	New England 	Seattle	open	n/a	0	0
+10/14/2012	6	8:20PM	Green Bay 	Houston	open	n/a	0	0
+10/15/2012	6	8:30PM	Denver 	San Diego	open	n/a	0	0
+10/18/2012	7	8:20PM	Seattle 	San Francisco	open	n/a	0	0
+10/21/2012	7	8:20PM	Pittsburgh 	Cinncinati	open	n/a	0	0
+10/21/2012	7	1:00PM	Tennessee 	Buffalo	open	n/a	0	0
+10/21/2012	7	1:00PM	New Orleans 	Tampa Bay	open	n/a	0	0
+10/21/2012	7	1:00PM	Cleveland 	Indianapolis	open	n/a	0	0
+10/21/2012	7	1:00PM	Washington 	NY Giants	open	n/a	0	0
+10/21/2012	7	1:00PM	Dallas 	Carolina	open	n/a	0	0
+10/21/2012	7	4:15PM	NY Jets 	New England	open	n/a	0	0
+10/21/2012	7	4:15PM	Jacksonville 	Oakland	open	n/a	0	0
+10/21/2012	7	1:00PM	Green Bay 	St. Louis	open	n/a	0	0
+10/21/2012	7	1:00PM	Baltimore 	Houston	open	n/a	0	0
+10/21/2012	7	1:00PM	Arizona 	Minnesota	open	n/a	0	0
+10/22/2012	7	8:30PM	Detroit 	Chicago	open	n/a	0	0
+10/25/2012	8	8:20PM	Tampa Bay 	Minnesota	open	n/a	0	0
+10/28/2012	8	1:00PM	Carolina 	Chicago	open	n/a	0	0
+10/28/2012	8	8:20PM	New Orleans 	Denver	open	n/a	0	0
+10/28/2012	8	1:00PM	San Diego 	Cleveland	open	n/a	0	0
+10/28/2012	8	4:05PM	Oakland 	Kansas City	open	n/a	0	0
+10/28/2012	8	4:15PM	NY Giants 	Dallas	open	n/a	0	0
+10/28/2012	8	1:00PM	Atlanta 	Philadelphia	open	n/a	0	0
+10/28/2012	8	1:00PM	Miami 	NY Jets	open	n/a	0	0
+10/28/2012	8	1:00PM	Seattle 	Detroit	open	n/a	0	0
+10/28/2012	8	1:00PM	Jacksonville 	Green Bay	open	n/a	0	0
+10/28/2012	8	1:00PM	New England 	St. Louis	open	n/a	0	0
+10/28/2012	8	1:00PM	Washington 	Pittsburgh	open	n/a	0	0
+10/28/2012	8	1:00PM	Indianapolis 	Tennessee	open	n/a	0	0
+10/29/2012	8	8:30PM	San Francisco 	Arizona	open	n/a	0	0
+11/1/2012	9	8:20PM	Kansas City 	San Diego	open	n/a	0	0
+11/4/2012	9	1:00PM	Denver 	Cinncinati	open	n/a	0	0
+11/4/2012	9	1:00PM	Baltimore 	Cleveland	open	n/a	0	0
+11/4/2012	9	1:00PM	Miami 	Indianapolis	open	n/a	0	0
+11/4/2012	9	8:20PM	Dallas 	Atlanta	open	n/a	0	0
+11/4/2012	9	4:15PM	Pittsburgh 	NY Giants	open	n/a	0	0
+11/4/2012	9	1:00PM	Detroit 	Jacksonville	open	n/a	0	0
+11/4/2012	9	1:00PM	Arizona 	Green Bay	open	n/a	0	0
+11/4/2012	9	4:05PM	Tampa Bay 	Oakland	open	n/a	0	0
+11/4/2012	9	1:00PM	Carolina 	Washington	open	n/a	0	0
+11/4/2012	9	4:05PM	Minnesota 	Seattle	open	n/a	0	0
+11/4/2012	9	1:00PM	Buffalo 	Houston	open	n/a	0	0
+11/4/2012	9	1:00PM	Chicago 	Tennessee	open	n/a	0	0
+11/5/2012	9	8:30PM	Philadelphia 	New Orleans	open	n/a	0	0
+11/8/2012	10	8:20PM	Indianapolis 	Jacksonville	open	n/a	0	0
+11/11/2012	10	4:15PM	St. Louis 	San Francisco	open	n/a	0	0
+11/11/2012	10	8:20PM	Houston 	Chicago	open	n/a	0	0
+11/11/2012	10	1:00PM	NY Giants 	Cinncinati	open	n/a	0	0
+11/11/2012	10	1:00PM	San Diego 	Tampa Bay	open	n/a	0	0
+11/11/2012	10	1:00PM	Tennessee 	Miami	open	n/a	0	0
+11/11/2012	10	4:15PM	Dallas 	Philadelphia	open	n/a	0	0
+11/11/2012	10	1:00PM	Denver 	Carolina	open	n/a	0	0
+11/11/2012	10	1:00PM	Buffalo 	New England	open	n/a	0	0
+11/11/2012	10	1:00PM	Oakland 	Baltimore	open	n/a	0	0
+11/11/2012	10	1:00PM	Atlanta 	New Orleans	open	n/a	0	0
+11/11/2012	10	4:05PM	NY Jets 	Seattle	open	n/a	0	0
+11/11/2012	10	1:00PM	Detroit 	Minnesota	open	n/a	0	0
+11/12/2012	10	8:30PM	Kansas City 	Pittsburgh	open	n/a	0	0
+11/15/2012	11	8:20PM	Miami 	Buffalo	open	n/a	0	0
+11/18/2012	11	4:15PM	San Diego 	Denver	open	n/a	0	0
+11/18/2012	11	1:00PM	Cinncinati 	Kansas City	open	n/a	0	0
+11/18/2012	11	1:00PM	Cleveland 	Dallas	open	n/a	0	0
+11/18/2012	11	1:00PM	Arizona 	Atlanta	open	n/a	0	0
+11/18/2012	11	1:00PM	Green Bay 	Detroit	open	n/a	0	0
+11/18/2012	11	1:00PM	Tampa Bay 	Carolina	open	n/a	0	0
+11/18/2012	11	1:00PM	Indianapolis 	New England	open	n/a	0	0
+11/18/2012	11	4:05PM	New Orleans 	Oakland	open	n/a	0	0
+11/18/2012	11	1:00PM	NY Jets 	St. Louis	open	n/a	0	0
+11/18/2012	11	1:00PM	Philadelphia 	Washington	open	n/a	0	0
+11/18/2012	11	8:20PM	Baltimore 	Pittsburgh	open	n/a	0	0
+11/18/2012	11	1:00PM	Jacksonville 	Houston	open	n/a	0	0
+11/19/2012	11	8:30PM	Chicago 	San Francisco	open	n/a	0	0
+11/22/2012	12	4:15PM	Washington 	Dallas	open	n/a	0	0
+11/22/2012	12	8:20PM	New England 	NY Jets	open	n/a	0	0
+11/22/2012	12	1:23PM	Houston 	Detroit	open	n/a	0	0
+11/25/2012	12	1:00PM	Minnesota 	Chicago	open	n/a	0	0
+11/25/2012	12	1:00PM	Oakland 	Cinncinati	open	n/a	0	0
+11/25/2012	12	1:00PM	Pittsburgh 	Cleveland	open	n/a	0	0
+11/25/2012	12	1:00PM	Atlanta 	Tampa Bay	open	n/a	0	0
+11/25/2012	12	4:15PM	St. Louis 	Arizona	open	n/a	0	0
+11/25/2012	12	4:05PM	Baltimore 	San Diego	open	n/a	0	0
+11/25/2012	12	1:00PM	Denver 	Kansas City	open	n/a	0	0
+11/25/2012	12	1:00PM	Buffalo 	Indianapolis	open	n/a	0	0
+11/25/2012	12	1:00PM	Seattle 	Miami	open	n/a	0	0
+11/25/2012	12	8:20PM	Green Bay 	NY Giants	open	n/a	0	0
+11/25/2012	12	1:00PM	Tennessee 	Jacksonville	open	n/a	0	0
+11/25/2012	12	4:15PM	San Francisco 	New Orleans	open	n/a	0	0
+11/26/2012	12	8:30PM	Carolina 	Philadelphia	open	n/a	0	0
+11/29/2012	13	8:20PM	New Orleans 	Atlanta	open	n/a	0	0
+12/2/2012	13	1:00PM	Seattle 	Chicago	open	n/a	0	0
+12/2/2012	13	1:00PM	Jacksonville 	Buffalo	open	n/a	0	0
+12/2/2012	13	4:05PM	Tampa Bay 	Denver	open	n/a	0	0
+12/2/2012	13	4:15PM	Cinncinati 	San Diego	open	n/a	0	0
+12/2/2012	13	1:00PM	Carolina 	Kansas City	open	n/a	0	0
+12/2/2012	13	8:20PM	Philadelphia 	Dallas	open	n/a	0	0
+12/2/2012	13	1:00PM	New England 	Miami	open	n/a	0	0
+12/2/2012	13	1:00PM	Arizona 	NY Jets	open	n/a	0	0
+12/2/2012	13	1:00PM	Indianapolis 	Detroit	open	n/a	0	0
+12/2/2012	13	1:00PM	Minnesota 	Green Bay	open	n/a	0	0
+12/2/2012	13	4:15PM	Cleveland 	Oakland	open	n/a	0	0
+12/2/2012	13	1:00PM	San Francisco 	St. Louis	open	n/a	0	0
+12/2/2012	13	4:15PM	Pittsburgh 	Baltimore	open	n/a	0	0
+12/2/2012	13	1:00PM	Houston 	Tennessee	open	n/a	0	0
+12/3/2012	13	8:30PM	NY Giants 	Washington	open	n/a	0	0
+12/6/2012	14	8:20PM	Denver 	Oakland	open	n/a	0	0
+12/9/2012	14	4:05PM	Miami 	San Francisco	open	n/a	0	0
+12/9/2012	14	1:00PM	Dallas 	Cinncinati	open	n/a	0	0
+12/9/2012	14	1:00PM	St. Louis 	Buffalo	open	n/a	0	0
+12/9/2012	14	1:00PM	Kansas City 	Cleveland	open	n/a	0	0
+12/9/2012	14	1:00PM	Philadelphia 	Tampa Bay	open	n/a	0	0
+12/9/2012	14	1:00PM	Tennessee 	Indianapolis	open	n/a	0	0
+12/9/2012	14	4:15PM	New Orleans 	NY Giants	open	n/a	0	0
+12/9/2012	14	1:00PM	NY Jets 	Jacksonville	open	n/a	0	0
+12/9/2012	14	8:20PM	Detroit 	Green Bay	open	n/a	0	0
+12/9/2012	14	1:00PM	Atlanta 	Carolina	open	n/a	0	0
+12/9/2012	14	1:00PM	Baltimore 	Washington	open	n/a	0	0
+12/9/2012	14	4:15PM	Arizona 	Seattle	open	n/a	0	0
+12/9/2012	14	1:00PM	San Diego 	Pittsburgh	open	n/a	0	0
+12/9/2012	14	1:00PM	Chicago 	Minnesota	open	n/a	0	0
+12/10/2012	14	8:30PM	Houston 	New England	open	n/a	0	0
+12/13/2012	15	8:20PM	Cinncinati 	Philadelphia	open	n/a	0	0
+12/16/2012	15	1:00PM	Green Bay 	Chicago	open	n/a	0	0
+12/16/2012	15	4:05PM	Seattle 	Buffalo	open	n/a	0	0
+12/16/2012	15	1:00PM	Washington 	Cleveland	open	n/a	0	0
+12/16/2012	15	4:05PM	Detroit 	Arizona	open	n/a	0	0
+12/16/2012	15	4:05PM	Carolina 	San Diego	open	n/a	0	0
+12/16/2012	15	4:15PM	Pittsburgh 	Dallas	open	n/a	0	0
+12/16/2012	15	1:00PM	Jacksonville 	Miami	open	n/a	0	0
+12/16/2012	15	1:00PM	NY Giants 	Atlanta	open	n/a	0	0
+12/16/2012	15	8:20PM	San Francisco 	New England	open	n/a	0	0
+12/16/2012	15	4:15PM	Kansas City 	Oakland	open	n/a	0	0
+12/16/2012	15	1:00PM	Minnesota 	St. Louis	open	n/a	0	0
+12/16/2012	15	1:00PM	Denver 	Baltimore	open	n/a	0	0
+12/16/2012	15	1:00PM	Tampa Bay 	New Orleans	open	n/a	0	0
+12/16/2012	15	1:00PM	Indianapolis 	Houston	open	n/a	0	0
+12/17/2012	15	8:30PM	NY Jets 	Tennessee	open	n/a	0	0
+12/22/2012	16	8:30PM	Atlanta 	Detroit	open	n/a	0	0
+12/23/2012	16	4:05PM	Cleveland 	Denver	open	n/a	0	0
+12/23/2012	16	1:00PM	St. Louis 	Tampa Bay	open	n/a	0	0
+12/23/2012	16	4:15PM	Chicago 	Arizona	open	n/a	0	0
+12/23/2012	16	1:00PM	Indianapolis 	Kansas City	open	n/a	0	0
+12/23/2012	16	1:00PM	New Orleans 	Dallas	open	n/a	0	0
+12/23/2012	16	1:00PM	Buffalo 	Miami	open	n/a	0	0
+12/23/2012	16	1:00PM	Washington 	Philadelphia	open	n/a	0	0
+12/23/2012	16	1:00PM	New England 	Jacksonville	open	n/a	0	0
+12/23/2012	16	8:20PM	San Diego 	NY Jets	open	n/a	0	0
+12/23/2012	16	1:00PM	Tennessee 	Green Bay	open	n/a	0	0
+12/23/2012	16	1:00PM	Oakland 	Carolina	open	n/a	0	0
+12/23/2012	16	1:00PM	NY Giants 	Baltimore	open	n/a	0	0
+12/23/2012	16	4:15PM	San Francisco 	Seattle	open	n/a	0	0
+12/23/2012	16	1:00PM	Cinncinati 	Pittsburgh	open	n/a	0	0
+12/23/2012	16	1:00PM	Minnesota 	Houston	open	n/a	0	0
+12/30/2012	17	4:15PM	Arizona 	San Francisco	open	n/a	0	0
+12/30/2012	17	1:00PM	Baltimore 	Cinncinati	open	n/a	0	0
+12/30/2012	17	1:00PM	NY Jets 	Buffalo	open	n/a	0	0
+12/30/2012	17	4:15PM	Kansas City 	Denver	open	n/a	0	0
+12/30/2012	17	4:15PM	Oakland 	San Diego	open	n/a	0	0
+12/30/2012	17	1:00PM	Houston 	Indianapolis	open	n/a	0	0
+12/30/2012	17	1:00PM	Tampa Bay 	Atlanta	open	n/a	0	0
+12/30/2012	17	1:00PM	Philadelphia 	NY Giants	open	n/a	0	0
+12/30/2012	17	1:00PM	Chicago 	Detroit	open	n/a	0	0
+12/30/2012	17	1:00PM	Miami 	New England	open	n/a	0	0
+12/30/2012	17	1:00PM	Dallas 	Washington	open	n/a	0	0
+12/30/2012	17	1:00PM	Carolina 	New Orleans	open	n/a	0	0
+12/30/2012	17	4:15PM	St. Louis 	Seattle	open	n/a	0	0
+12/30/2012	17	1:00PM	Cleveland 	Pittsburgh	open	n/a	0	0
+12/30/2012	17	1:00PM	Jacksonville 	Tennessee	open	n/a	0	0
+12/30/2012	17	1:00PM	Green Bay 	Minnesota	open	n/a	0	0

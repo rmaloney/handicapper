@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :admin
 
   has_many :plays
-  has_one :user_standing
+  
 
   def self.win_loss
   	users = User.all

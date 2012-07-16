@@ -1,14 +1,14 @@
  
 
-   <h3>Your Plays</h3>
+   <h2>Your Plays</h2>
 
       <table width="65%" class="table table-bordered table-condensed">
         <thead>
         <tr>
           <th> Week     </th>
-          <th>Selection </th>
-          <th>Home Team</th>
-          <th>Visitor</th>
+          <th>Home </th>
+          <th>Away</th>
+          <th>Your Selection</th>
           <th></th>
         </tr>
         </thead>
@@ -16,9 +16,9 @@
           <% @plays.each do |play| %>
             <tr>
                <td> <%= play.game.week %> </td>        
-               <td> <%= play.selection %> </td>
-               <td> <%= play.game.home_team %> </td>
+               <td> <%= play.game.home_team %>  </td>
                <td> <%= play.game.visitor_team %> </td>
+               <td> <%= play.selection %> </td>
 
               <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
               <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>

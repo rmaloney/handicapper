@@ -12,7 +12,7 @@
     <%= stylesheet_link_tag :application %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
     <%= csrf_meta_tag %>
-    <%= javascript_include_tag :all %>
+    
 
     <script type="text/javascript">
           $('li > a').click(function() {
@@ -54,7 +54,7 @@
           <a class="brand" href="#">RDF Pick'em <%= image_tag('shield.png') %></a>
           <div class="nav-collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="/games">About</a></li>
+              <li class="active"><a href="/pages/about">About</a></li>
               <li><a href="#about">Standings</a></li>
               <li ><a href="/users/edit">Account</a></a></li>
             </ul>
@@ -105,7 +105,7 @@
             
             <div id="user_nav" class="pull-right">  
                 <% if user_signed_in? %>  
-                 Hello <%= current_user.handle %>.  
+                 Hello, <%= current_user.handle %> <br/> 
                   <%= link_to "Sign out", destroy_user_session_path %>  
                 <% else %>  
                   
@@ -113,6 +113,7 @@
                 <% end %>  
                 
                 <br/>
+                <br>
                 <p> NFL Standings </p>
                 <p> NFL Stats     </p>
 
@@ -126,7 +127,7 @@
       <hr>
 
       <footer>
-        <p>&copy; handicapper 2012</p>
+        <p>&copy; RDF Productions 2012</p>
 
         <%= debug(params) if Rails.env.development? %>
       </footer>

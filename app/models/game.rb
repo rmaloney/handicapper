@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
 
-	validates :line, :home_team, :visitor_team, :favorite, :total, :presence => true
+	validates :home_team, :visitor_team,  :presence => true
 	has_one :result
 	has_many :plays
 	
@@ -39,6 +39,11 @@ class Game < ActiveRecord::Base
 		'Kansas City'
 	]
 
+	#Date ranges for all 17 weeks.
+	#Allows app to calculate the current week we are in
+	def current_week
+
+	end 
 	#determines the underdog of the game
 	def underdog
 	    if home_team != favorite
@@ -70,6 +75,7 @@ class Game < ActiveRecord::Base
 	    end
 	end
 
+	#team logos
 	def home_team_logo
 		self.home_team + ".jpg"
 	end

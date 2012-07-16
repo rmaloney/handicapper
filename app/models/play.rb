@@ -8,6 +8,8 @@ class Play < ActiveRecord::Base
 
 	#validation
 	validates :selection, :uniqueness => {:scope => :game_id}
+	validates :selection, :presence => true
+	validate :cannot_have_more_than_6_plays
 
 	#scopes
 	scope :closed, where(:status => "Closed")
@@ -17,7 +19,6 @@ class Play < ActiveRecord::Base
 	# Find the result of the game the play was made on. 
 	# Update :play_result with Win, Loss or Push
 	def process
-		
 		game = self.game
 		result = game.result
 		choice = self.selection
@@ -45,13 +46,8 @@ class Play < ActiveRecord::Base
 
 	#Helper method to collect user emails and ids for Plays. Used to compute stats, standings, etc.
 	def self.emails
-		all_plays = Play.where(:status => "Closed")
-
-
 		 standings = {}
 		 #now we loop through the array of user_id/email combos
-		 
-
 	end
 	
 		
@@ -59,6 +55,16 @@ class Play < ActiveRecord::Base
 	#Callback function sets status of all newly created plays to 'Open'
 	def default_values
 		self.status ||= 'Open'
+	end
+
+	#Validation to ensure user cannot have more than 6 open plays
+
+	def cannot_have_more_than_6_plays
+		open_plays = Play.where("status = ? AND user_id = ?", "Open", user_id)
+		
+		if open_plays.count >= 6
+			errors.add(:selection, "You already have 6 open plays")
+		end
 	end
 
 	def update_standings

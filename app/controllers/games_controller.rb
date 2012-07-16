@@ -5,9 +5,10 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
-
+    @current_week = 1
+    @games = Game.where(:week => @current_week)
     @play_count = Play.open.where(:user_id => current_user.id).length
+    @remaining = 6 - @play_count
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @games }

@@ -71,6 +71,10 @@ Handicapper::Application.routes.draw do
   # just remember to delete public/index.html.
    root :to => 'games#index'
 
+
+  #error handling ...may need to update this for rails 3.2
+   match '*a', :to => 'errors#routing'
+   
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

@@ -1,9 +1,11 @@
 
 
     <p class="pull-right">
-        <%= "You have #{@play_count} picks for this week" %>
+        <%= "You have #{pluralize(@play_count,'pick')}  for this week" %> </br>
+        <%= @remaining %> Picks left to submit
     </p>
-    <h2 >Current Matchups</h2>
+
+    <h2>Current Lines</h2>
     <br/>
 
     <table class="table table-bordered table-condensed table-striped" width="55%">
@@ -34,8 +36,9 @@
             <% end %>
             </td>
         </tr>
-      
+        
         <% end %>  
+
     </tbody> 
     </table>
 

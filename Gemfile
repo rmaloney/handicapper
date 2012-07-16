@@ -29,7 +29,8 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'
-gem 'activerecord-import'
+gem 'activerecord-import', '>= 0.2.0'
+gem 'will_paginate', '~> 3.0.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

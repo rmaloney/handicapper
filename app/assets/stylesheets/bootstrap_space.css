@@ -133,18 +133,18 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 13px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
 }
 a {
-  color: #4183c4;
+  color: #640000;
   text-decoration: none;
 }
 a:hover {
-  color: #4183c4;
+  color: #DF4E19;
   text-decoration: underline;
 }
 .row {
@@ -1270,14 +1270,14 @@ table {
 .table th,
 .table td {
   padding: 6px;
-  line-height: 18px;
+  line-height: 16px;
   text-align: center;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
 .table th, .table th:hover {
   font-weight: bold;
-  background: #920402;
+  background: #9B0402;
   color: #fefefe;
 }
 
@@ -1298,7 +1298,7 @@ table {
 }
 .table-condensed th,
 .table-condensed td {
-  padding: 4px 5px;
+  padding: 2px;
 }
 .table-bordered {
   border: 1px solid #dddddd;
@@ -2683,6 +2683,7 @@ input[type="submit"].btn.btn-mini {
 }
 .nav > li > a {
   display: block;
+  color: #20201F;
 }
 .nav > li > a:hover {
   text-decoration: none;
@@ -3018,6 +3019,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .brand:hover {
   text-decoration: none;
+  color: #DF4E19;
 }
 .navbar .brand {
   
@@ -3029,16 +3031,19 @@ input[type="submit"].btn.btn-mini {
   font-weight: 200;
   line-height: 1;
   color: #333333;
+  font-family: Georgia;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
   line-height: 40px;
 }
+
+a .brand:hover {color: #DF4E19;}
 .navbar .navbar-link {
   color: #222222;
 }
 .navbar .navbar-link:hover {
-  color: #4183c4;
+  color: #DF4E19;
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -4219,7 +4224,7 @@ a.badge:hover {
   font-weight: bold;
 }
 .navbar .brand:hover {
-  color: #4183c4;
+  color: #DF4E19;
 }
 .navbar .navbar-text {
   line-height: 38px;
@@ -4235,11 +4240,11 @@ a.badge:hover {
 }
 .navbar .nav .active > a:hover {
   background-color: transparent;
-  color: #4183c4;
+  color: #DF4E19;
 }
 .navbar .nav > li > a:hover,
 .navbar .nav li.open.dropdown .dropdown-toggle {
-  color: #4183c4;
+  color: #DF4E19;
 }
 .navbar .nav .dropdown-toggle .caret {
   border-top-color: #333333;

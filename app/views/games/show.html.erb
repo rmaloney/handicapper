@@ -1,28 +1,28 @@
 
-      <div class="span6 ">
-          <span><h3><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h3></span>
+      
+          <span><h2><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h2></span>
           <br/>
 
-          <h4> <%= @game.start_date.strftime('%B %d,'+'%Y') %> </h4> <br/>
-          <h4> Kickoff: <%=  @game.kickoff %> </h4>
+          <h4> <%= @game.start_date.strftime("%B #{@game.start_date.day.ordinalize},"+' %Y')  + " @ #{@game.kickoff} " %> </h4> <br/>
+          
           <br/>
-          <strong> <p>Favorite: <%= "#{@game.favorite}  (-#{@game.line}) " %> </p></strong>
-          <strong> <p>Total: <%= @game.total %></p> </strong>
+          <span><strong class="orange"> Favorite: </strong><%= "#{@game.favorite}(-#{@game.line}) " %>  <strong class="orange"> Total: </strong><%= @game.total %> </span>
+          
           <br/>
-          <%= link_to 'Go Back', games_path %>
-      </div> 
-
+          
+     
         <p><%= hidden_field(:game_id, @game.id) %></p>
 
-          <div class="span2">
-              <%= button_to "Make a play on this game", new_play_path, :class => "btn btn-primary", :method => "get"  %>
+        
+              <%= button_to "Make a play", new_play_path, :class => "btn btn-primary", :method => "get"  %>
               <br/>
               <% if can? :update, @game %>
                 <%= button_to "Results for this game", new_result_path, :class => "btn btn-primary", :method => "get"  %>
                 <%= link_to 'Edit', edit_game_path(@game) %> 
               <% end %>
             <%= @message %>
-          </div>
+            <%= link_to 'Go Back', games_path %>
+     
 
   
 
