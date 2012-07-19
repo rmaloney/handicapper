@@ -25,6 +25,8 @@ GEM
     activerecord-import (0.2.9)
       activerecord (~> 3.0)
       activerecord (~> 3.0)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.1)
       activemodel (= 3.2.1)
       activesupport (= 3.2.1)
@@ -79,6 +81,7 @@ GEM
     multi_json (1.2.0)
     nokogiri (1.5.2-x86-mingw32)
     orm_adapter (0.0.7)
+    pg (0.14.0-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -150,6 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-import (>= 0.2.0)
+  activerecord-postgresql-adapter
   cancan
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.2)
