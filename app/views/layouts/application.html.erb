@@ -8,30 +8,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bitter|Oswald' rel='stylesheet' type='text/css'>
+    
     <%= stylesheet_link_tag :application %>
-    <%= javascript_include_tag :all %>
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="stylesheets/mobile.css" />
+    <%= javascript_include_tag :application %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
     <%= csrf_meta_tag %>
     
 
     <script type="text/javascript">
-          $('li > a').click(function() {
-          $('li').removeClass();
-          $(this).parent().addClass('active');
-    });
+       (function(){
+          $('.nav-collapse').collapse();
+        })()
 
 
     </script>
-         
+
+  
+
     <style type="text/css">
       body {
-        padding-top: 60px;
+           
         padding-bottom: 40px;
       }
       .sidebar-nav {
         padding: 9px 0;
       }
+
+      
     </style>
  
 
@@ -52,35 +56,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">RDF Pick'em <%= image_tag('shield.png') %></a>
+          <a class="brand" href="#">SixPlays </a>  <!--<%= image_tag('shield.png') %> -->
           <div class="nav-collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="/pages/about">About</a></li>
-              <li><a href="#about">Standings</a></li>
+              <li><a href="/pages/about">About</a></li>
+              <li><a href="/results/standings">Standings</a></li>
               <li ><a href="/users/edit">Account</a></a></li>
-            </ul>
-
-            
-              
+            </ul>  
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container-fluid" >
-      <div class="row-fluid">   
-        <div class="span2">
-             
-          <div class="sidebar-nav" id="sidebar">
-            <ul class="nav nav-list">
-              <li class="nav-header">Plays</li>
-              <li class=""><a href="/plays">My Plays</a></li>
-              <li><a href="#">Stats/Results</a></li>
+      <div class="row-fluid" style="margin-top: 50px;"> 
+        
+        <div class="span9">
+         <!-- Yield the main action's view here --> 
+          <%= yield %>
+        </div> <!--span-->  
 
+        <div class="span3">
+
+             
+          <div class=" well sidebar-nav">
+            <ul class="nav nav-list">
+              <% if user_signed_in? %>
+                <li class="nav-header red"> Hi, <%= current_user.handle %>  <%= link_to "Sign out", destroy_user_session_path %>   </li>
+                <li><%= "You have #{pluralize(@play_count,'pick')}  for this week" %>. <br/> <%= @remaining %> Picks left to submit</li>
+                <li class="nav-header">Plays</li>
+                <li class=""><a href="/plays">My Plays</a></li>
+                <li><a href="#">Stats/Results</a></li>
+              <% end %>
               <li class="nav-header"> Games</li>
               <li><a href="/games">Current Lines</a></li>
               <li><a href="/results">Results</a></li>
-              <li><a href="#">Schedule</a></li>
+              <li><a href="/games/schedule">Schedule</a></li>
 
               <li class="nav-header"> News </li>
               <li><a href="#"> Injury </a></li>
@@ -88,60 +99,17 @@
               <li><a href="#"> Latest</a> </li>
             </ul>
           </div><!--/.well -->
-        </div><!--/span -->
-        <div class="span8">
-        
-          
-
-           
-         <!-- Yield the actions view here --> 
-          <%= yield %>
-      
-
-
-        </div> <!--span-->
-
-          <!--right sidebar -->
-          <div class="span2 well">
-            
-            <div id="user_nav">  
-                <% if user_signed_in? %>  
-                 Hello, <%= current_user.handle %> <br/> 
-                  <%= link_to "Sign out", destroy_user_session_path %>  
-                <% else %>  
-                  
-                  <%= link_to "Sign in", new_user_session_path %>  
-                <% end %>  
-                
-                <br/>
-                <br>
-                <p>
-                    <%= "You have #{pluralize(@play_count,'pick')}  for this week" %> <br/><br/>
-                    <%= @remaining %> Picks left to submit
-                </p>
-
-                <a href="#"> NFL Standings </a><br/>
-                <a href="#"> NFL Stats     </a>
-
-            </div>  
-          </div>
-          
-     
-        
+        </div><!--/spam -->
       </div><!--/row-->
-
+    </div>
       <hr>
 
       <footer>
         <p>&copy; RDF Productions 2012</p>
-
         <%= debug(params) if Rails.env.development? %>
       </footer>
 
     </div><!--/.fluid-container-->
-    
-    
-   
 
   </body>
 </html>

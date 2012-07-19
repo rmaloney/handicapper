@@ -1,0 +1,36 @@
+
+    <h2>Current Lines</h2>
+    <br/>
+
+        
+    
+            <% @games.each do |game| %>
+
+            <div class="row-fluid game_display">
+                  <div class = "span2">
+                      
+                        <h4><%= game.start_date.strftime('%A') %>   <%= game.kickoff %>  </h4>
+                    </div>
+                       
+                   
+                    <div class="span4">
+                      <h3><%= game.index_favorite + " (-#{game.line})"  + " vs."%>
+                                <%= game.index_underdog %> </h3><br/>
+                                <strong> Total: </strong><%= game.total %>
+                                
+                                <br/>
+                                <%= link_to 'Details', game, :class => "btn btn-primary" %>
+                        
+                        <% if can? :update, game %>
+                            <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
+                        <% end %>
+                    </div>
+            </div>
+            
+            <% end %>  
+      
+
+   
+
+    <br />
+

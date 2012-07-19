@@ -3,6 +3,8 @@ class GamesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :get_user
   load_and_authorize_resource
+
+  #Loads the current weeks games (Those open to plays)
   # GET /games
   # GET /games.json
   def index
@@ -10,9 +12,21 @@ class GamesController < ApplicationController
     @games = Game.where(:week => @current_week)
     @play_count = Play.open.where(:user_id => current_user.id).length
     @remaining = 6 - @play_count
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @games }
+    end
+  end
+
+  #Load and paginate the full schedule
+  def schedule
+    start = Time.parse('2012-09-05')
+    @games = Game.where(:start_date => (start)..start + 7.days)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @game }
     end
   end
 
