@@ -84,5 +84,9 @@ class Game < ActiveRecord::Base
 		self.visitor_team + ".jpg"
 	end
 
+	def logo(side)
+		side + ".jpg"
+	end
+
 
 end

@@ -1,0 +1,20 @@
+<h2> 2012 Schedule </h2>
+
+		<% @games.each do |game| %>
+
+			<div class="row-fluid game_display">
+
+				<div class = "span3">
+	               <h3><%= game.start_date.strftime('%A') %>   <%= game.kickoff %>  </h3>
+	            </div>
+
+	            <div class="span4">
+	                <h3> <%= game.visitor_team%> @ <%= game.home_team  %> </h3>
+	                <%= link_to 'Details', game, :class => "btn btn-primary" %>
+
+	                <% if can? :update, game %>
+	                    <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
+	                <% end %>
+	            </div>
+	        </div>
+        <% end %>

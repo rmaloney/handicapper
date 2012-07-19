@@ -1,12 +1,12 @@
 
       
-          <span><h2><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h2></span>
+         <h2><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h2>
           <br/>
 
-          <h4> <%= @game.start_date.strftime("%B #{@game.start_date.day.ordinalize},"+' %Y')  + " @ #{@game.kickoff} " %> </h4> <br/>
+          <h3> <%= @game.start_date.strftime("%B #{@game.start_date.day.ordinalize},"+' %Y')  + " @ #{@game.kickoff} " %> </h3> <br/>
           
           <br/>
-          <span><strong class="orange"> Favorite: </strong><%= "#{@game.favorite}(-#{@game.line}) " %>  <strong class="orange"> Total: </strong><%= @game.total %> </span>
+         <span> <h4><span class="orange"> Favorite: </span><%= "#{@game.favorite}(-#{@game.line}) " %>   <span class="orange"> Total:</span> <%= @game.total %> </h4>
           
           <br/>
           
