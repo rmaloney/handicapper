@@ -32,6 +32,7 @@ gem 'cancan'
 gem 'activerecord-import', '>= 0.2.0'
 gem 'will_paginate', '~> 3.0.0'
 gem 'activerecord-postgresql-adapter'
+gem 'thin'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
