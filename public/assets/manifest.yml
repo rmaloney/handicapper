@@ -1,5 +1,80 @@
 ---
-football_ball.png: football_ball-7889258c8e6126c2a68037fa597e3340.png
-rails.png: rails-782b548cc1ba7f898cdad2d9eb8420d2.png
-application.js: application-e56457ae8705676577e2eceda7f8dd4e.js
-application.css: application-c23983e1d6eca9ff2163864244de98ca.css
+Arizona.gif: Arizona-8e085fb4bf1bfb53c9a78df120c79d89.gif
+football_ball.png: football_ball-315035ab3a9fbb11200d72f4a8109568.png
+glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
+glyphicons-halflings.png: glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png
+logos/Arizona.gif: logos/Arizona-8492a90b384af9db4e74525ee4ec4d35.gif
+logos/Arizona.jpg: logos/Arizona-b6ab723b65337a1b62bfa036534cb9dd.jpg
+logos/Atlanta.jpg: logos/Atlanta-3f11d6efc5130925d4faa9b28822ca6a.jpg
+logos/Baltimore.jpg: logos/Baltimore-627be587ac730b311fcb7771befab3cc.jpg
+logos/Buffalo.jpg: logos/Buffalo-2960a88b3869cd9ac64967750bec990e.jpg
+logos/Carolina.jpg: logos/Carolina-26dc5de09dcc37d6942a2877ab49b3f6.jpg
+logos/Chicago.jpg: logos/Chicago-194ea63cb65880d9d8d7ebb45571f33a.jpg
+logos/Chicago.png: logos/Chicago-542c06d01a2ffc42b76e3ef565fd2ab5.png
+logos/Cinncinati.jpg: logos/Cinncinati-5a8e75b6d6c9f3c24e7cece3fd2b8e1f.jpg
+logos/Cleveland.jpg: logos/Cleveland-759f81d14fcfd256b273889c9b12e2de.jpg
+logos/Dallas.jpg: logos/Dallas-657de7b3df794ae3543b4ef0a5463cc8.jpg
+logos/Dallas.svg: logos/Dallas-11c16276c476bd77420643e1db07912f.svg
+logos/Denver.jpg: logos/Denver-dc62a3c7e66bfc2444a6a1e9064224bd.jpg
+logos/Detroit.jpg: logos/Detroit-aaacd421b3a2642ca5ce7bd74a3394fa.jpg
+logos/Green Bay.jpg: logos/Green Bay-baea7558b792bbee2ec5752c9dade5c4.jpg
+logos/Houston.jpg: logos/Houston-65b56a29e5ff5da01376e2c7c06fe2cf.jpg
+logos/Indianapolis.jpg: logos/Indianapolis-59556d570c657042bcca8418290159a2.jpg
+logos/Jacksonville.jpg: logos/Jacksonville-98998b2dd86aed5fa4aef24002cfbda5.jpg
+logos/Kansas City.jpg: logos/Kansas City-fae215f93178bbcc66ee6a39bde6e3c9.jpg
+logos/Miami.jpg: logos/Miami-b48edd04b3ae0ec360724d6c4c3fdf89.jpg
+logos/Minnesota.jpg: logos/Minnesota-2d39b016f0f2feba563cbdbbe78330ea.jpg
+logos/NY Giants.jpg: logos/NY Giants-e860df56af6ed5137ad8d4578e84cb5b.jpg
+logos/NY Giants.svg: logos/NY Giants-0a771d6e6d1e99906b09e45572081c08.svg
+logos/NY Jets.jpg: logos/NY Jets-30d70cd08577d9ab5a217b8f3fbcc999.jpg
+logos/New England.jpg: logos/New England-abde2a712ce464bd8bada20c391ac4ec.jpg
+logos/New Orleans.jpg: logos/New Orleans-8b67eeb7c94fb9e6f3c9fbbf605d0d9c.jpg
+logos/New Orleans.svg: logos/New Orleans-14f4ec6b511a6ce1732fd953be580a45.svg
+logos/Oakland.jpg: logos/Oakland-0086953e9ca9d6f5697ab5b666919b93.jpg
+logos/Philadelphia.gif: logos/Philadelphia-7d9102677e1c4cf69c73eca4b3c97e12.gif
+logos/Philadelphia.jpg: logos/Philadelphia-5088846802edf8eee4c9293b603ce076.jpg
+logos/Philadelphia.svg: logos/Philadelphia-6984bd9814ebb42f8202beaa2e92e221.svg
+logos/Pittsburgh.jpg: logos/Pittsburgh-909b254101bab6f78592b0e2d88393f3.jpg
+logos/San Diego.jpg: logos/San Diego-389e744f6b640abab19c9d14626ad0a2.jpg
+logos/San Francisco.jpg: logos/San Francisco-f2ec90f9b0c5933481d5838ca4336b3f.jpg
+logos/Seattle.jpg: logos/Seattle-e431b835ab0046553ad12a7ee9f427b3.jpg
+logos/St. Louis.jpg: logos/St. Louis-c0257f82c2778cf4a9acd39a53527402.jpg
+logos/Tampa Bay.jpg: logos/Tampa Bay-cc3da0b98355b1bc1cdf5edecf71de9a.jpg
+logos/Tennessee.jpg: logos/Tennessee-6151e24063ae757b5fa4846b62feeddf.jpg
+logos/Washington.jpg: logos/Washington-d3856fd04e040468815b86dd0c8fc829.jpg
+logos/Washington.png: logos/Washington-4d455ce0b43d95a27087a950d1960e36.png
+logos/resized/Atlanta.jpg: logos/resized/Atlanta-50e2232e5fbd2da58217c9b8699c7acb.jpg
+logos/resized/Baltimore.jpg: logos/resized/Baltimore-3436fd28ec7f4ddd96e1b30ff746f560.jpg
+logos/resized/Buffalo.jpg: logos/resized/Buffalo-151373c7f3c1129395f351c07c43d19f.jpg
+logos/resized/Carolina.jpg: logos/resized/Carolina-26dc5de09dcc37d6942a2877ab49b3f6.jpg
+logos/resized/Chicago.jpg: logos/resized/Chicago-c9bb57dd68bf3b8e6e7e5ce878500299.jpg
+logos/resized/Cincinnatti.jpg: logos/resized/Cincinnatti-4ac6706bcecd08d1f18e9a5e82069d00.jpg
+logos/resized/Cleveland.jpg: logos/resized/Cleveland-6797ab6c47b9a46ce49b9ac738056e62.jpg
+logos/resized/Dallas.jpg: logos/resized/Dallas-b8122a8d42c43a7b357f5e5b21a1f051.jpg
+logos/resized/Denver.jpg: logos/resized/Denver-6a9e601da5f4372c9bf75ce4843de792.jpg
+logos/resized/Detroit.jpg: logos/resized/Detroit-f4c883808c3262c0713d29ce59955fe8.jpg
+logos/resized/Green Bay.jpg: logos/resized/Green Bay-43d93bb08d25847b10049e2d92d70e67.jpg
+logos/resized/Houston.jpg: logos/resized/Houston-517aa02b2b9eff1c2f42dd6bafb0e37b.jpg
+logos/resized/Indianapolis.jpg: logos/resized/Indianapolis-df8aa8c42cdafd72f8125b05cee5b2b2.jpg
+logos/resized/Jacksonville.jpg: logos/resized/Jacksonville-0e16deb4a895243ead2568a2ae229077.jpg
+logos/resized/Kansas City.jpg: logos/resized/Kansas City-eee0ac40778d660501be17025ad88747.jpg
+logos/resized/Miami.jpg: logos/resized/Miami-52fcbf678206c7ec33b2869b1e31dffe.jpg
+logos/resized/Minnesota.jpg: logos/resized/Minnesota-d0e59686700bdb4ebb4f5c8b75a8b3a4.jpg
+logos/resized/NY Giants_65x43.jpg: logos/resized/NY Giants_65x43-7c82fb3d7d714995b70a26f817117d2e.jpg
+logos/resized/NY Jets_65x43.jpg: logos/resized/NY Jets_65x43-2d856df656501b5f41508fab3002fa4a.jpg
+logos/resized/New England_65x43.jpg: logos/resized/New England_65x43-621dc8de99ea0da17dcf9fe0ca433709.jpg
+logos/resized/New Orleans_65x43.jpg: logos/resized/New Orleans_65x43-ebfb1fea7a09778aeaf4e11fa2902b63.jpg
+logos/resized/Oakland_65x43.jpg: logos/resized/Oakland_65x43-0988577a23d0ab85baa46adfa1d85af5.jpg
+logos/resized/Pittsburgh_65x43.jpg: logos/resized/Pittsburgh_65x43-189c776fdd5260839f37cf8a3f2fdfc3.jpg
+logos/resized/San Diego_65x43.jpg: logos/resized/San Diego_65x43-612a5a88ded2a3b06839ea0a34c943c4.jpg
+logos/resized/San Francisco_65x43.jpg: logos/resized/San Francisco_65x43-d3d64da06fefc116322ffd3443161181.jpg
+logos/resized/Seattle_65x43.jpg: logos/resized/Seattle_65x43-a26bb42152c7510a75859c1852cfa97f.jpg
+logos/resized/St. Louis_65x43.jpg: logos/resized/St. Louis_65x43-c0a492c08d357cdcc0d7d8fe488f5dca.jpg
+logos/resized/Tampa Bay_65x43.jpg: logos/resized/Tampa Bay_65x43-c65bf6bc01622dadbdd07f72bd703e6a.jpg
+logos/resized/Tennessee_65x43.jpg: logos/resized/Tennessee_65x43-b974dfa113c1144f9c3abfd830153066.jpg
+logos/resized/Washington_65x43.jpg: logos/resized/Washington_65x43-10425504dd95ae04b370ff5e619a01d1.jpg
+pac.jpg: pac-09177b78619f03b479dfb02e5e5a3b9a.jpg
+rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
+shield.png: shield-ee92cffe465a5f83bd2ab0787925bd61.png
+application.js: application-089da71d36ee06b0d817765e793da6cb.js
+application.css: application-1121f7a5861491bb8dc47c028801f823.css
