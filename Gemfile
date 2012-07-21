@@ -26,6 +26,7 @@ group :test do
 	gem 'capybara', '1.1.2'
 end
 
+gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'

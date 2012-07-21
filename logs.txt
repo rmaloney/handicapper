@@ -1,0 +1,100 @@
+2012-07-20T05:04:57+00:00 heroku[slugc]: Slug compilation finished
+2012-07-20T05:04:59+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 17822`
+2012-07-20T05:05:00+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2012-07-20T05:05:00+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-07-20T05:05:00+00:00 app[web.1]: [2012-07-20 05:05:00] ERROR SignalException: SIGTERM
+2012-07-20T05:05:04+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-07-20T05:05:04+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-07-20T05:05:05+00:00 app[web.1]: 
+2012-07-20T05:05:05+00:00 app[web.1]: [DEVISE] Devise.apply_schema is deprecated and has no effect. Please remove it.
+2012-07-20T05:05:05+00:00 app[web.1]: 
+2012-07-20T05:05:05+00:00 app[web.1]: 
+2012-07-20T05:05:05+00:00 app[web.1]: [DEVISE] Devise.use_salt_as_remember_token is deprecated and has no effect. Please remove it.
+2012-07-20T05:05:05+00:00 app[web.1]: 
+2012-07-20T05:05:06+00:00 app[web.1]: >> Thin web server (v1.4.1 codename Chromeo)
+2012-07-20T05:05:06+00:00 app[web.1]: >> Maximum connections set to 1024
+2012-07-20T05:05:06+00:00 app[web.1]: >> Listening on 0.0.0.0:17822, CTRL+C to stop
+2012-07-20T05:05:07+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2012-07-20T05:05:07+00:00 heroku[web.1]: State changed from starting to up
+2012-07-20T05:05:07+00:00 app[web.1]: [2012-07-20 05:05:07] ERROR SignalException: SIGTERM
+2012-07-20T05:05:07+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-07-20T05:05:10+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2012-07-20T05:05:10+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2012-07-20T05:05:12+00:00 heroku[web.1]: Process exited with status 137
+2012-07-20T06:13:25+00:00 heroku[web.1]: Idling
+2012-07-20T06:13:28+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2012-07-20T06:13:29+00:00 heroku[web.1]: Process exited with status 0
+2012-07-20T06:13:29+00:00 heroku[web.1]: State changed from up to down
+2012-07-21T01:26:32+00:00 heroku[slugc]: Slug compilation started
+2012-07-21T01:26:52+00:00 heroku[api]: Release v12 created by rmaloney84@yahoo.com
+2012-07-21T01:26:52+00:00 heroku[api]: Deploy c94903f by rmaloney84@yahoo.com
+2012-07-21T01:26:53+00:00 heroku[slugc]: Slug compilation finished
+2012-07-21T01:28:22+00:00 heroku[web.1]: Unidling
+2012-07-21T01:28:22+00:00 heroku[web.1]: State changed from down to starting
+2012-07-21T01:28:24+00:00 heroku[web.1]: Starting process with command `bundle exec rails server thin -p 59108 -e production`
+2012-07-21T01:28:28+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require': no such file to load -- thin (LoadError)
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/thin.rb:1:in `<top (required)>'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `const_get'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `block in get'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `each'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `inject'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `get'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:269:in `server'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:59:in `start'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-07-21T01:28:28+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-07-21T01:28:28+00:00 app[web.1]: Exiting
+2012-07-21T01:28:30+00:00 heroku[web.1]: Process exited with status 1
+2012-07-21T01:28:30+00:00 heroku[web.1]: State changed from starting to crashed
+2012-07-21T01:28:30+00:00 heroku[web.1]: State changed from crashed to starting
+2012-07-21T01:28:31+00:00 heroku[web.1]: Starting process with command `bundle exec rails server thin -p 5291 -e production`
+2012-07-21T01:28:36+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require': no such file to load -- thin (LoadError)
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/thin.rb:1:in `<top (required)>'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `const_get'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `block in get'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `inject'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `get'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `each'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:269:in `server'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:59:in `start'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-07-21T01:28:36+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-07-21T01:28:36+00:00 app[web.1]: Exiting
+2012-07-21T01:28:37+00:00 heroku[web.1]: Process exited with status 1
+2012-07-21T01:28:37+00:00 heroku[web.1]: State changed from starting to crashed
+2012-07-21T01:28:38+00:00 heroku[router]: Error H10 (App crashed) -> GET young-day-2070.herokuapp.com/games dyno= queue= wait= service= status=503 bytes=
+2012-07-21T01:41:06+00:00 heroku[web.1]: State changed from crashed to starting
+2012-07-21T01:41:08+00:00 heroku[web.1]: Starting process with command `bundle exec rails server thin -p 23500 -e production`
+2012-07-21T01:41:12+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require': no such file to load -- thin (LoadError)
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `const_get'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler/thin.rb:1:in `<top (required)>'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `block in get'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `get'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `each'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:269:in `server'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/handler.rb:20:in `inject'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:59:in `start'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-07-21T01:41:12+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-07-21T01:41:12+00:00 app[web.1]: Exiting
+2012-07-21T01:41:14+00:00 heroku[web.1]: Process exited with status 1
+2012-07-21T01:41:14+00:00 heroku[web.1]: State changed from starting to crashed
+2012-07-21T01:41:30+00:00 heroku[router]: Error H10 (App crashed) -> GET young-day-2070.herokuapp.com/games dyno= queue= wait= service= status=503 bytes=
