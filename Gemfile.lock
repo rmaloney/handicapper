@@ -160,7 +160,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   devise
   foreman
-  jquery-rails
+  jquery-rails (~> 2.0.1)
   pg
   rails (= 3.2.1)
   rspec-rails (= 2.9.0)
