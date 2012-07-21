@@ -23,5 +23,4 @@ production:
   encoding: utf8
   database: handicapper_production
   pool: 5
-  username: 
-  password:
+ 
