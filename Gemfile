@@ -35,6 +35,7 @@ gem 'will_paginate', '~> 3.0.0'
 gem 'activerecord-postgresql-adapter'
 gem 'foreman'
 gem 'taps'
+gem 'sequel'
 #gem 'thin'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
