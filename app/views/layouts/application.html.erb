@@ -11,6 +11,7 @@
     
     <%= stylesheet_link_tag :application %>
     <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="stylesheets/mobile.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <%= javascript_include_tag :application %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
     <%= csrf_meta_tag %>
@@ -19,12 +20,10 @@
     <script type="text/javascript">
        (function(){
           $('.nav-collapse').collapse();
-        })()
+        })();
 
 
     </script>
-
-  
 
     <style type="text/css">
       body {
@@ -76,14 +75,13 @@
           <%= yield %>
         </div> <!--span-->  
 
-        <div class="span3">
-
-             
+      <% if params[:controller] != "devise/sessions" %>
+        <div class="span3">  
           <div class=" well sidebar-nav">
             <ul class="nav nav-list">
               <% if user_signed_in? %>
                 <li class="nav-header red"> Hi, <%= current_user.handle %>  <%= link_to "Sign out", destroy_user_session_path %>   </li>
-                <li><%= "You have #{pluralize(@play_count,'pick')}  for this week" %>. <br/> <%= @remaining %> Picks left to submit</li>
+                <li><%= "You have made #{pluralize(@play_count,'pick')}  this week" %>. <br/> <%= @remaining %> Picks left to submit</li>
                 <li class="nav-header">Plays</li>
                 <li class=""><a href="/plays">My Plays</a></li>
                 <li><a href="#">Stats/Results</a></li>
@@ -100,6 +98,7 @@
             </ul>
           </div><!--/.well -->
         </div><!--/spam -->
+      <% end %>
       </div><!--/row-->
     </div>
       <hr>

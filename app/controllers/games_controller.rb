@@ -1,8 +1,10 @@
 class GamesController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :get_user
+  before_filter :play_count
   load_and_authorize_resource
+
+   
 
   #Loads the current weeks games (Those open to plays)
   # GET /games
