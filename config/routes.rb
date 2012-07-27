@@ -1,5 +1,10 @@
 Handicapper::Application.routes.draw do
-  devise_for :users # :controllers => {:registrations => "registrations"}
+  
+  if Rails.env == 'production'
+    devise_for :users, :controllers => {:registrations => "registrations"}
+  else
+    devise_for :users
+  end
 
  # devise_scope :user do
    # get '/settings' => 'registrations#edit'
