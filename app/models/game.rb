@@ -3,6 +3,8 @@ class Game < ActiveRecord::Base
 	validates :home_team, :visitor_team,  :presence => true
 	has_one :result
 	has_many :plays
+
+	before_create :default_values
 	
 	TEAMS = [
 		'NY Giants',
@@ -44,6 +46,7 @@ class Game < ActiveRecord::Base
 	def current_week
 
 	end 
+
 	#determines the underdog of the game
 	def underdog
 	    if home_team != favorite
@@ -88,5 +91,8 @@ class Game < ActiveRecord::Base
 		side + ".jpg"
 	end
 
+	def default_values
+		self.status ||= 'Current'
+	end
 
 end

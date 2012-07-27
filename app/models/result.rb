@@ -2,6 +2,8 @@ class Result < ActiveRecord::Base
 	belongs_to :game
 	belongs_to :play
 	
+
+	#checks to see if result ATS was favorite, underdog, or push
 	def line_result
 		line = self.game.line
 		result = favorite_score - underdog_score
@@ -14,7 +16,7 @@ class Result < ActiveRecord::Base
 		end
 	end
 
-
+	#checks to see if result for over/under was over, under or push
 	def total_result
 		total = self.game.total
 		result = favorite_score + underdog_score
@@ -26,4 +28,5 @@ class Result < ActiveRecord::Base
 			"Push"
 		end
 	end
+	
 end

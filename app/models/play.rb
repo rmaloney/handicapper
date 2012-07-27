@@ -7,7 +7,7 @@ class Play < ActiveRecord::Base
 	before_create :default_values
 
 	#validation
-	validates :selection, :uniqueness => {:scope => :game_id}
+	validates :selection, :uniqueness => {:scope => [:game_id, :user_id]}
 	validates :selection, :presence => true
 	validate :cannot_have_more_than_6_plays
 

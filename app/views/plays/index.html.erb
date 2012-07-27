@@ -1,6 +1,6 @@
  
 
-   <h2>Your Plays</h2>
+   <h2>Your Picks</h2>
 
       <table width="65%" class="table table-bordered table-condensed">
         <thead>
@@ -22,7 +22,7 @@
 
               <td><%= link_to 'Show', play_path(play) , :class => "btn" %>
               <%= link_to 'Edit', edit_play_path(play), :class => "btn" %>
-              <% if current_user.admin? %>
+              <% if can? :destroy, play %>
                 <%= button_to 'Delete', play, confirm: 'Are you sure?', :method => :delete, :class => "btn btn-danger",    %></td>
               <% end %>
             </tr>

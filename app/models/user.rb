@@ -32,7 +32,6 @@ class User < ActiveRecord::Base
 
 
   #checks to see if a user has a play on the existing game
-
   def has_play?(game)
     plays = self.plays.find_all_by_game_id(game)
     if plays.length > 0
@@ -42,4 +41,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  #returns total number of wins
+  def wins
+    self.plays.select {|p| p.play_result == "Win"}.length
+  end
+
+  #returns total number of losses
+  def losses
+    self.plays.select{|p| p.play_result == "Loss"}.length
+  end
 end

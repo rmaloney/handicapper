@@ -1534,6 +1534,8 @@ table {
 
 .table th {
   font-weight: bold;
+  background: #99020D;
+  color: #fff;
 }
 
 .table thead th {
@@ -1623,7 +1625,7 @@ table {
 
 .table tbody tr:hover td,
 .table tbody tr:hover th {
-  background-color: #f5f5f5;
+  background-color: #FFEABD; /*#f5f5f5; */
 }
 
 table .span1 {
@@ -3620,7 +3622,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #999999;
+  color: #fff;
 }
 
 .navbar .navbar-text {
@@ -3790,6 +3792,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav > li > a {
+  font-weight: bold;
   float: none;
   padding: 9px 10px 11px;
   line-height: 19px;
@@ -3811,6 +3814,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav > li > a:hover {
+  font-weight: bold;
   color: #ffffff;
   text-decoration: none;
   background-color: transparent;

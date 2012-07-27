@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
 	  		@remaining = 6 - @play_count
 	  	end
   	end
+  	
 	private
 
 	def catch_not_found

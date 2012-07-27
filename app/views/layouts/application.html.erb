@@ -18,20 +18,21 @@
     
 
     <script type="text/javascript">
-       (function(){
           $('.nav-collapse').collapse();
-        })();
-
-
     </script>
 
     <style type="text/css">
-      body {
-           
+      body {    
         padding-bottom: 40px;
+        
       }
       .sidebar-nav {
-        padding: 9px 0;
+        padding: 9px 0 0 9px;
+        text-align: left;
+        border-left: 1px solid #444;
+        border-bottom: 1px solid #444;
+        height: 665px;
+        
       }
 
       
@@ -71,16 +72,22 @@
       <div class="row-fluid" style="margin-top: 50px;"> 
         
         <div class="span9">
+           <% if flash[:alert] %>
+              <p class="flash-error"><%= flash[:alert] %></p>
+           <% end %>
+           <% if flash[:notice] %>
+              <p class="flash-notice"><%= flash[:notice] %></p>
+           <% end %>
          <!-- Yield the main action's view here --> 
           <%= yield %>
         </div> <!--span-->  
 
       <% if params[:controller] != "devise/sessions" %>
         <div class="span3">  
-          <div class=" well sidebar-nav">
+          <div class="sidebar-nav">
             <ul class="nav nav-list">
               <% if user_signed_in? %>
-                <li class="nav-header red"> Hi, <%= current_user.handle %>  <%= link_to "Sign out", destroy_user_session_path %>   </li>
+                <li class="nav-header red"> Hi, <strong class="dark_blue"> <%= current_user.handle %>  </strong><%= link_to "Sign out", destroy_user_session_path, :class => "red" %>   </li>
                 <li><%= "You have made #{pluralize(@play_count,'pick')}  this week" %>. <br/> <%= @remaining %> Picks left to submit</li>
                 <li class="nav-header">Plays</li>
                 <li class=""><a href="/plays">My Plays</a></li>

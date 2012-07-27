@@ -27,7 +27,7 @@
             <td><%= game.total %></td>
            
             <td>
-                <%= link_to 'Details', game, :class => "btn btn-primary" %>
+                <%= link_to 'Details', game, :class => "btn btn-primary btn-inverse" %> 
 
             <% if can? :update, game %>
                 <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
