@@ -13,8 +13,8 @@
         <% @results.each do |result| %>
           <tr>
             
-            <td><%= result.game.index_favorite + " (- #{result.game.line})" + " #{result.favorite_score}" %></td>
-            <td><%= result.game.index_underdog + " #{result.underdog_score} " %> </td>
+            <td><%= result.game.favorite + " (- #{result.game.line})" + " #{result.favorite_score}" %></td>
+            <td><%= result.game.underdog + " #{result.underdog_score} " %> </td>
             <td>Covers: <%= result.line_result + ", " + result.total_result  %> </td>
           
            

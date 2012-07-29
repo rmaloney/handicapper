@@ -6,6 +6,7 @@ class Ability
 
 		if user.admin?
 			can :manage, Game
+			can :manage, Result
 			can [:create, :read,:update,:destroy], Play, :user_id => user.id
 		else
 			can :schedule, Game
