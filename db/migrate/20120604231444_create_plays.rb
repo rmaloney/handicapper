@@ -5,7 +5,7 @@ class CreatePlays < ActiveRecord::Migration
       t.integer :game_id
       t.string :selection
       t.string :result
-      t.string :status, :default => "open"
+      t.string :status
 
       t.timestamps
     end
