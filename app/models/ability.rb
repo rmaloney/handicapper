@@ -11,6 +11,7 @@ class Ability
 			can :schedule, Game
 			can :read, Game
 			can [:create, :read,:update, :destroy], Play, :user_id => user.id
+			can :read, Play, :status => "Closed"
 			can :manage, User, :user_id => user.id	
 		end
 	end
