@@ -1,5 +1,8 @@
 
       <div class="game_details">
+
+       
+        
          <h2><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h2>
           <br/>
 
@@ -21,8 +24,8 @@
                 <%= link_to 'Edit', edit_game_path(@game) %> 
               <% end %>
             <%= @message %>
-            <%= link_to 'Go Back', games_path %>
-      </div>
+            
+        </div>
 
   
 

@@ -15,7 +15,7 @@
 
         <div class="row" id="play_form">
 
-          <h2> Make a play </h2>
+          <h2> Make a Pick </h2>
         	<h3 class="red"> <%= @game.index_favorite + "(-#{@game.line})" + " vs. " + @game.index_underdog %> </h3>  
          
         	<!-- Information displayed in this form is related to the play being made on the game !-->
@@ -56,7 +56,7 @@
                 <%= f.submit "Submit", :class => "btn btn-success" %>
           
           </div>
-          <%= link_to ' << Go Back', plays_path %>
+          
         </div>
       <br/>
 

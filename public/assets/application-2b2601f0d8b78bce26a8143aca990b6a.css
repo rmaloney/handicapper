@@ -6441,7 +6441,7 @@ a.badge:hover {
   .border: 1px solid red;
 }
 .game_details{
-  
+  border: 1px solid #444;
   padding: 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
