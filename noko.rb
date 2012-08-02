@@ -1,54 +1,10 @@
-class Game < ActiveRecord::Base
+require 'open-uri'
+require 'nokogiri'
 
-	require 'open-uri'
-	require 'nokogiri'
-
-	validates :home_team, :visitor_team,  :presence => true
-	has_one :result
-	has_many :plays
-
-	before_create :default_values
-	
-	TEAMS = [
-		'NY Giants',
-		'Philadelphia',
-		'Washington',
-		'Dallas',
-		'Atlanta',
-		'New Orleans',
-		'Tampa Bay',
-		'Carolina',
-		'Detroit',
-		'Green Bay',
-		'Minnesota',
-		'Chicago',
-		'San Francisco',
-		'St. Louis',
-		'Seattle',
-		'Arizona',
-		'New England',
-		'NY Jets',
-		'Miami',
-		'Buffalo',
-		'Tennessee',
-		'Houston',
-		'Jacksonville',
-		'Indianapolis',
-		'Baltimore',
-		'Pittsburgh',
-		'Cinncinati',
-		'Cleveland',
-		'San Diego',
-		'Denver',
-		'Oakland',
-		'Kansas City'
-	]
-
-	URL_MAP = {
+URL_MAP = {
 		'Dallas' => 'http://espn.go.com/nfl/team/_/name/dal/dallas-cowboys',
 		'NY Giants' => 'http://espn.go.com/nfl/team/_/name/nyg/new-york-giants',
 		'Philadelphia' => 'http://espn.go.com/nfl/team/_/name/phi/philadelphia-eagles',
-		'Washington' => 'http://espn.go.com/nfl/team/_/name/wsh/washington-redskins',
 		'Arizona' => 'http://espn.go.com/nfl/team/_/name/ari/arizona-cardinals',
 		'San Francisco' => 'http://espn.go.com/nfl/team/_/name/sf/san-francisco-49ers',
 		'Seattle' => 'http://espn.go.com/nfl/team/_/name/sea/seattle-seahawks',
@@ -78,89 +34,32 @@ class Game < ActiveRecord::Base
 		'Jacksonville' => 'http://espn.go.com/nfl/team/_/name/jac/jacksonville-jaguars',
 		'Tennessee' => 'http://espn.go.com/nfl/team/_/name/ten/tennessee-titans'
 	}
-	#Date ranges for all 17 weeks.
-	#Allows app to calculate the current week we are in
-	def current_week
-
-	end 
-
-	#determines the underdog of the game
-	def underdog
-	    if home_team != favorite
-	        home_team
-	    else
-	        visitor_team
-	    end
-	end
-
-	#returns a concatanated title for the game
-	def game_title
-		"#{home_team} vs. #{visitor_team}"
-	end
-
-	#formats underdog and favorite correctly in views (Capitalizes if home team)
-	def index_favorite
-		if home_team == favorite
-	        home_team.upcase
-	    else
-	    	favorite
-	    end
-	end
-
-	def index_underdog
-		if home_team == underdog
-	        underdog.upcase
-	    else
-	    	underdog
-	    end
-	end
-
-	#team logos
-	def home_team_logo
-		self.home_team + ".jpg"
-	end
-
-	def visitor_team_logo
-		self.visitor_team + ".jpg"
-	end
-
-	def logo(side)
-		side + ".jpg"
-	end
 
 
-	def self.matchup_stats(team)
-		url = URL_MAP[team]
-		doc = Nokogiri::HTML(open(url))
 
-		# Fetch stats. # 1 =>Pass yd # 2 =>Rush Yards # 3 =>Opp Pass Yards# 4 => Opp Rush Yards
+
+def home_stats(home_team)
+		home_url = URL_MAP[home_team]
+		doc = Nokogiri::HTML(open(home_url))
+
+		# Fetch stats.
+		# 1 =>Pass yd
+		# 2 =>Rush Yards
+		# 3 =>Opp Pass Yards
+		# 4 => Opp Rush Yards
 		yards = []
 		ranks = []
-
+		
 		doc.css("div.mod-content > span").each do |h|
 			yards << h.text
 		end
 
 		#fetch NFL ranks for each stat
 		doc.css("div.mod-content > strong").each do |h|
-			ranks << "(#{h.text})"
+			ranks << h.text
 		end
 
-		stats = yards.zip(ranks)
-		stats.each.map do |s|
-			s.join ' '
-		end
-
-	end
-
-
-
-
-
-
-
-	def default_values
-		self.status ||= 'Current'
-	end
-
+		final = yards.zip(ranks)
 end
+
+puts home_stats('NY Giants').class

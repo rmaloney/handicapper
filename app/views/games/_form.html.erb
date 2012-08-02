@@ -48,6 +48,12 @@
       <%= f.label :kickoff %><br />
       <%= f.text_field :kickoff %>
     </div>
+
+    <div class="field">
+      <%= f.label :start_time %>
+      <%= f.date_select :start_time %>
+      <%= f.time_select :start_time, :ampm => true, :ignore_date => true %>
+    </div>
     <div class="field">
       <%= f.label :status %><br />
       <%= f.text_field :status %>

@@ -1,13 +1,44 @@
 
       <div class="game_details">
 
-       
+       <div id="game_matchup">
+          
+
+          <strong> Matchup </strong>
+          <table class="table  table-bordered table-striped table-condensed">
+            <thead>
+              <th></th>
+              <th><%= @game.visitor_team %></th>
+              <th><%= @game.home_team %> </th>
+            </thead>
+            <tr>
+              <td><strong>Rushing YPG</strong></td>
+              <td> <%= @visitor_stats[1] %></td>
+              <td><%=  @home_stats[1]  %> </td>
+            <tr>
+              <td><strong>Opp Rushing YPG</strong></td>
+              <td> <%= @visitor_stats[3] %></td>
+              <td><%= @home_stats[3]  %>  </td>
+            </tr>
+            <tr>
+              <td><strong>Passing YPG</strong></td>
+              <td> <%= @visitor_stats[0] %></td>
+              <td> <%= @home_stats[0]  %></td>
+            </tr>
+            <tr>
+              <td><strong>Opp Passing YPG</strong></td>
+              <td> <%= @visitor_stats[2] %></td>
+              <td> <%= @home_stats[2]  %> </td>
+            </tr>
+          </table>
+        </div>
         
          <h2><%= @game.visitor_team %>  <%= image_tag("logos/" + @game.visitor_team_logo) %> at   <%= @game.home_team %> <%= image_tag("logos/" + @game.home_team_logo) %> </h2>
           <br/>
 
           <h3> <%= @game.start_date.strftime("%B #{@game.start_date.day.ordinalize},"+' %Y')  + " @ #{@game.kickoff} " %> </h3> <br/>
           
+
           <br/>
          <span> <h4><span class="orange"> Favorite: </span><%= "#{@game.favorite}(-#{@game.line}) " %>   <span class="orange"> Total:</span> <%= @game.total %> </h4>
           

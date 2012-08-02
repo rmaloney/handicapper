@@ -36,7 +36,8 @@ class GamesController < ApplicationController
   # GET /games/1.json
   def show
     @game = Game.find(params[:id])
-    
+    @home_stats = Game.matchup_stats(@game.home_team)
+    @visitor_stats = Game.matchup_stats(@game.visitor_team)
 
     if current_user.has_play?(params[:id])
       @message = "You have a a pending play on this game."
