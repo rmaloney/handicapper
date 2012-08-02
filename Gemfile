@@ -10,6 +10,7 @@ gem 'activerecord-postgresql-adapter'
 gem 'foreman'
 gem 'taps'
 gem 'sequel'
+gem 'nokogiri'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
