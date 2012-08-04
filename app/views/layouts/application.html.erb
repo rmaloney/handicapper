@@ -4,10 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>SixPlays</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <%= csrf_meta_tag %>
     <style type="text/css">
       body {    
         padding-bottom: 40px;
@@ -18,37 +19,24 @@
         padding: 9px 0 0 9px;
         text-align: left;
         border-left: rgba(255,255,255, .6);
-        height: 665px;
-        
-      }
+       }
 
-      
     </style>
     
     <%= stylesheet_link_tag :application %>
-
-    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="stylesheets/mobile.css" />
-
-    <script type="text/javascript">
-          $('.nav-collapse').collapse();
-
-    </script>
-    
     <%= javascript_include_tag :application %>
     <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
-    <%= csrf_meta_tag %>
+   
     
+     <script type="text/javascript">
+          $('.nav-collapse').collapse();
 
+     </script>
     
-
-    
- 
-
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  
   </head>
 
   <body>

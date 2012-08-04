@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :play_count
+  #before_filter :play_count
   load_and_authorize_resource
 
    

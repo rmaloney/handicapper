@@ -17,7 +17,6 @@ class PlaysController < ApplicationController
 	def show
   		@play = Play.find(params[:id])
 
-      
   		respond_to do |format|
   			format.html 
   			format.json { render json: @play }
@@ -42,7 +41,7 @@ class PlaysController < ApplicationController
 
 	def create
 	 	@play =Play.new(params[:play])
-    @game = Game.find(params[:play][:game_id])
+    	@game = Game.find(params[:play][:game_id])
 
 	 	respond_to do |format|
 	 		if @play.save

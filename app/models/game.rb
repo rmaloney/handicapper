@@ -78,6 +78,7 @@ class Game < ActiveRecord::Base
 		'Jacksonville' => 'http://espn.go.com/nfl/team/_/name/jac/jacksonville-jaguars',
 		'Tennessee' => 'http://espn.go.com/nfl/team/_/name/ten/tennessee-titans'
 	}
+	
 	#Date ranges for all 17 weeks.
 	#Allows app to calculate the current week we are in
 	def current_week
