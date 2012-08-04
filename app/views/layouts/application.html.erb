@@ -8,21 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    
-    <%= stylesheet_link_tag :application %>
-
-    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="stylesheets/mobile.css" />
-    
-    <%= javascript_include_tag :application %>
-    <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
-    <%= csrf_meta_tag %>
-    
-
-    <script type="text/javascript">
-          $('.nav-collapse').collapse();
-
-    </script>
-
     <style type="text/css">
       body {    
         padding-bottom: 40px;
@@ -39,6 +24,24 @@
 
       
     </style>
+    
+    <%= stylesheet_link_tag :application %>
+
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="stylesheets/mobile.css" />
+
+    <script type="text/javascript">
+          $('.nav-collapse').collapse();
+
+    </script>
+    
+    <%= javascript_include_tag :application %>
+    <link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" media="screen, projection">
+    <%= csrf_meta_tag %>
+    
+
+    
+
+    
  
 
     <!--[if lt IE 9]>
