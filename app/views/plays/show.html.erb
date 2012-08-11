@@ -11,13 +11,12 @@
 
 	  <p><strong> Total: </strong> <%= @play.game.total %> </p> 
 
-	  <p> <strong> Play last updated on: </strong> <%= @play.updated_at.localtime.strftime('%B %d, %Y %l:%M%P') %>   </p>
+	  <p> <strong> Play last updated on: </strong> <%= @play.updated_at.strftime('%B %d, %Y %l:%M%P') %>   </p>
 	  
 
 		<p>
 		<strong> Your Selection: </strong>
-			<%= @play.selection %>
-
+			<%= @play.selection_details %>
 		</p>
 
 	</div>

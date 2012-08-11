@@ -40,7 +40,18 @@ class Play < ActiveRecord::Base
 		self.status = 'Closed'
 	end
 
+	def selection_details
+		pick = self.selection
+		game = self.game
 
+		if pick == "Favorite"
+			game.favorite 
+		elsif pick == "Underdog"
+			game.underdog 
+		else
+			pick
+		end
+	end
 
 
 

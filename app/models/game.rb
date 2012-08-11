@@ -156,10 +156,6 @@ class Game < ActiveRecord::Base
 
 
 
-
-
-
-
 	def default_values
 		self.status ||= 'Current'
 	end
