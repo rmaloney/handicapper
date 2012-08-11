@@ -60,6 +60,6 @@ module Handicapper
     config.assets.initialize_on_precompile = false
     
     config.time_zone = 'Eastern Time (US & Canada)'
-    config.active_record.default_timezone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local
   end
 end
