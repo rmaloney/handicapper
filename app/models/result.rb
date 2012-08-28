@@ -2,7 +2,7 @@ class Result < ActiveRecord::Base
 	belongs_to :game
 	belongs_to :play
 	
-	after_create :update_plays
+	after_save :update_plays
 
 	#checks to see if result ATS was favorite, underdog, or push
 	def line_result
@@ -53,12 +53,37 @@ class Result < ActiveRecord::Base
 	end
 
 
+	#should return an array of hashes with user as key, and wins/losses as values
+	# e.g [:ryan=> {:wins => 10, :losses => 6}, :ned => {:wins => 9, :losses 7}]
+	
+	def self.standings
+		plays = Play.closed
+		#plays.group(:user_id)
+
+		#puts plays.inspect
+		users = plays.map(&:user_id).uniq
+		standings = Hash.new{|hash,key| hash[key]=Hash.new(0)}
+		puts users.inspect
+		users.each do |u|
+			plays = Play.closed.where(:user_id => u)
+
+			plays.each do |p|
+				if p.play_result == "Win"
+					standings[u][:wins] += 1
+				elsif p.play_result == "Loss"
+					standings[u][:losses] += 1
+				end
+			end
+			puts "User with user_id #{u} has #{standings[u][:wins]} wins and #{standings[u][:losses]} losses"
+		end
+	end
+
 
 
 	protected
 
 	def update_plays
-		plays = Play.find_all_by_game_id(game_id)
+		plays = Play.find_all_by_game_id(self.game_id)
 		plays.each do |p|
 			choice = p.selection
 			resultset = [self.line_result, self.total_result]
@@ -75,7 +100,7 @@ class Result < ActiveRecord::Base
 				p.update_attributes(:play_result => "Loss")	
 			end
 
-			p.status = 'Closed'
+			p.update_attributes(:status => "Closed")
 		end
 	end
 	

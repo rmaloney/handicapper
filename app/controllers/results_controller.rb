@@ -45,6 +45,15 @@ class ResultsController < ApplicationController
   		end
   	end
 
-  	
+  	def standings
+  		@standings = []
+
+  		User.all.each do |u|
+  			if u.plays.any? {|p| p.status == "Closed"}
+	  			@standings << [u.handle, u.wins, u.losses, u.pushes]
+	  			@standings = @standings.sort_by{|x| -(x[1] / (x[1] + x[2]).to_f)}
+	  		end
+  		end
+	end
 
 end

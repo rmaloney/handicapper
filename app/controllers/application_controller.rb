@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   	protect_from_forgery
+
+  	# This filter returns a count of all OPEN plays a user has, e.g plays without a result
   	before_filter :play_count
 	around_filter :catch_not_found, :catch_404
 

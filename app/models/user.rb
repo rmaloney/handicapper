@@ -50,4 +50,8 @@ class User < ActiveRecord::Base
   def losses
     self.plays.select{|p| p.play_result == "Loss"}.length
   end
+
+  def pushes
+    self.plays.select{|p| p.play_result == "Push"}.length
+  end
 end
