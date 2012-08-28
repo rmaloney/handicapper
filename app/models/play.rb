@@ -10,6 +10,8 @@ class Play < ActiveRecord::Base
 	validates :selection, :uniqueness => {:scope => [:game_id, :user_id]}
 	validates :selection, :presence => true
 	validate :cannot_have_more_than_6_plays
+	validate :cannot_make_play_on_game_with_result
+	validate :cannot_update_closed_play
 
 	#scopes
 	scope :closed, where(:status => "Closed")
@@ -40,6 +42,8 @@ class Play < ActiveRecord::Base
 		self.status = 'Closed'
 	end
 
+	# Returns the team names for favorite/underdog if user made a pick on the game line.
+	# Returns over/under if user made a pick on the total
 	def selection_details
 		pick = self.selection
 		game = self.game
@@ -54,22 +58,12 @@ class Play < ActiveRecord::Base
 	end
 
 
-
-	#Helper method to collect user emails and ids for Plays. Used to compute stats, standings, etc.
-	def self.emails
-		 standings = {}
-		 #now we loop through the array of user_id/email combos
-	end
-	
-		
-
-	#Callback function sets status of all newly created plays to 'Open'
+	# Callback  to set status of all newly created plays to 'Open'
 	def default_values
 		self.status ||= 'Open'
 	end
 
-	#Validation to ensure user cannot have more than 6 open plays
-
+	# Validation to ensure user cannot have more than 6 open plays
 	def cannot_have_more_than_6_plays
 		open_plays = Play.where("status = ? AND user_id = ?", "Open", user_id)
 		
@@ -78,7 +72,17 @@ class Play < ActiveRecord::Base
 		end
 	end
 
-	def update_standings
+	# Validation. Prevents user from creating a play on a game with a closed status
+	def cannot_make_play_on_game_with_result
+		if self.game.status == "Closed"
+			errors.add( :selection, "That game is currently closed")
+		end
+	end
 
+	# Another validation method. Prevents user from updating a play with a closed status
+	def cannot_update_closed_play
+		if self.status == "Closed"
+			errors.add(:selection, "This pick is currently closed")
+		end
 	end
 end

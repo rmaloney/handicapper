@@ -3,6 +3,7 @@ class Result < ActiveRecord::Base
 	belongs_to :play
 	
 	after_save :update_plays
+	after_create :close_game
 
 	#checks to see if result ATS was favorite, underdog, or push
 	def line_result
@@ -104,5 +105,10 @@ class Result < ActiveRecord::Base
 		end
 	end
 	
+	# Set the associated games result to "Closed" if a result is created for it
+
+	def close_game
+		self.game.update_attributes(:status => "Closed")
+	end
 	
 end

@@ -2,13 +2,15 @@ class Game < ActiveRecord::Base
 
 	require 'open-uri'
 	require 'nokogiri'
+	require 'will_paginate/array'
 
 	validates :home_team, :visitor_team,  :presence => true
 	has_one :result
 	has_many :plays
 
+
 	before_create :default_values
-	
+	self.per_page = 16
 	TEAMS = [
 		'NY Giants',
 		'Philadelphia',

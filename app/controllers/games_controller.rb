@@ -24,8 +24,8 @@ class GamesController < ApplicationController
   #Load and paginate the full schedule
   def schedule
     start = Time.parse('2012-09-05')
-    @games = Game.where(:start_date => (start)..start + 7.days)
-
+    @games = Game.where(:start_date => ((Time.now)..(start + 7.days)))
+    @schedule = Game.order("week ASC").paginate(:page => params[:page])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @game }

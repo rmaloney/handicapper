@@ -1,16 +1,20 @@
 <h2> 2012 Schedule </h2>
+<%= will_paginate @schedule %>
 
-		<% @games.each do |game| %>
+
+
+		<% @schedule.each do |game| %>
 
 			<div class="row-fluid game_display">
 
 				<div class = "span3">
+					<h4> Week <%= game.week %> </h4>
 	               <h3><%= game.start_date.strftime('%A') %>   <%= game.kickoff %>  </h3>
 	            </div>
 
 	            <div class="span4">
-	                <h3> <%= game.visitor_team%> @ <%= game.home_team  %> </h3>
-	                <%= link_to 'Details', game, :class => "btn btn-primary" %>
+	                <h3 class="blue"> <%= game.visitor_team%> at <%= game.home_team  %> </h3>
+	                <%= link_to 'Details', game, :class => "btn btn-primary btn-inverse" %>
 
 	                <% if can? :update, game %>
 	                    <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>

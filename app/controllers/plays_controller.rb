@@ -7,7 +7,6 @@ class PlaysController < ApplicationController
 
 	def index
 	    @plays = Play.find_all_by_user_id(current_user.id)
-	    
 	    respond_to do |format|
 	      format.html # index.html.erb
 	      format.json { render json: @plays }
@@ -24,15 +23,14 @@ class PlaysController < ApplicationController
   	end
 
 	def new
-	 
 	 	#@game = Game.find(session[:game_id])
 	 	@play = Play.new
 	 	@game = Game.find(session[:game_id])
 
-    #do we already have a play for this game?
-    if current_user.has_play?(@game.id)
-      @existing_play = true
-    end
+	    #do we already have a play for this game?
+	    if current_user.has_play?(@game.id)
+	      @existing_play = true
+	    end
 	 	respond_to do |format|
 	      format.html # new.html.erb
 	      format.json { render json: @play }
@@ -51,37 +49,37 @@ class PlaysController < ApplicationController
 		        format.html { render action: "new" }
 		        format.json { render json: @play.errors, status: :unprocessable_entity }
 			end
-    end
-  end
+    	end
+  	end
 
-  def edit
-    @play = Play.find(params[:id])
-    @game = Game.find(@play.game_id)
-  end
+  	def edit
+	    @play = Play.find(params[:id])
+	    @game = Game.find(@play.game_id)
+  	end
 
-  def update
-    @play = Play.find(params[:id])
-     @game = Game.find(@play.game_id)
-    respond_to do |format|
-      if @play.update_attributes(params[:play])
-        format.html { redirect_to @play, notice: 'Your play has been updated' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @play.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  	def update
+	    @play = Play.find(params[:id])
+	     @game = Game.find(@play.game_id)
+	    respond_to do |format|
+	      if @play.update_attributes(params[:play])
+	        format.html { redirect_to @play, notice: 'Your play has been updated' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: "edit" }
+	        format.json { render json: @play.errors, status: :unprocessable_entity }
+	      end
+	    end
+  	end
 
-  def destroy
-    @play = Play.find(params[:id])
-    @play.destroy
+  	def destroy
+	    @play = Play.find(params[:id])
+	    @play.destroy
 
-    respond_to do |format|
-      format.html {redirect_to(plays_url)}
-      format.json { head :no_content }
-    end
-  end
+	    respond_to do |format|
+	      format.html {redirect_to(plays_url)}
+	      format.json { head :no_content }
+	    end
+  	end
 
     #this isnt live yet
 	def process_results

@@ -170,7 +170,7 @@ a {
 }
 
 a:hover {
-  color: #005580;
+  color: #000; /*#005580; */
   text-decoration: underline;
 }
 
@@ -198,6 +198,7 @@ a:hover {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
+  background: red;
 }
 
 .span12 {
@@ -3227,7 +3228,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
-  color: #999999;
+  color: #000;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }

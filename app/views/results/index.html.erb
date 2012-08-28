@@ -7,6 +7,7 @@
         <th>Favorite </th>
         <th>Underdog </th>
        
+        <th>Winning Sides</th>
         <th></th>
       </tr>
 
@@ -15,7 +16,7 @@
             
             <td><%= result.game.favorite + " (- #{result.game.line})" + " #{result.favorite_score}" %></td>
             <td><%= result.game.underdog + " #{result.underdog_score} " %> </td>
-            <td>Covers: <%= result.line_result + ", " + result.total_result  %> </td>
+            <td> <%= result.line_result + ", " + result.total_result  %> </td>
           
            
             <td><%= link_to 'Details', result, :class => "btn btn-primary" %>

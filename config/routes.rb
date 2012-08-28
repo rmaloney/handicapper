@@ -10,7 +10,11 @@ Handicapper::Application.routes.draw do
    # get '/settings' => 'registrations#edit'
   #end
 
-  resources :plays 
+  resources :plays do
+    collection do
+      get 'trends'
+    end
+  end
 
   match "plays/:id" => "plays#show", :via => :get
 
