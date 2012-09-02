@@ -1,5 +1,7 @@
 Handicapper::Application.routes.draw do
   
+  resources :posts
+
   if Rails.env == 'production'
     devise_for :users, :controllers => {:registrations => "registrations"}
   else

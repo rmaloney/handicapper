@@ -11,6 +11,7 @@ gem 'foreman'
 gem 'taps'
 gem 'sequel'
 gem 'nokogiri'
+gem 'barometer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

@@ -8,7 +8,8 @@
           <th> Week     </th>
           <th>Home </th>
           <th>Away</th>
-          <th>Your Selection</th>
+          <th>Your Pick</th>
+          <th>Result</th>
           <th></th>
         </tr>
         </thead>
@@ -19,7 +20,7 @@
                <td> <%= play.game.home_team %>  </td>
                <td> <%= play.game.visitor_team %> </td>
                <td> <%= play.selection_details %> </td>
-
+               <td> <%= play.play_result %>
               <td>
                 <div class= "btn-group">
                   <%= link_to 'Details', play_path(play) , :class => "btn" %>

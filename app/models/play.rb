@@ -58,6 +58,7 @@ class Play < ActiveRecord::Base
 	end
 
 
+	
 	# Callback  to set status of all newly created plays to 'Open'
 	def default_values
 		self.status ||= 'Open'

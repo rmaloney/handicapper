@@ -2,6 +2,7 @@ class Game < ActiveRecord::Base
 
 	require 'open-uri'
 	require 'nokogiri'
+	require 'barometer'
 	require 'will_paginate/array'
 
 	validates :home_team, :visitor_team,  :presence => true
@@ -10,7 +11,8 @@ class Game < ActiveRecord::Base
 
 
 	before_create :default_values
-	self.per_page = 16
+	#after_save :kickoff_time
+	
 	TEAMS = [
 		'NY Giants',
 		'Philadelphia',
@@ -118,7 +120,10 @@ class Game < ActiveRecord::Base
 	    end
 	end
 
-	#team logos
+	
+
+	
+	# team logos
 	def home_team_logo
 		self.home_team + ".jpg"
 	end
@@ -131,7 +136,15 @@ class Game < ActiveRecord::Base
 		side + ".jpg"
 	end
 
+	def weather
+		barometer = Barometer.new("#{self.home_team}")
+		weather = barometer.measure
+		temp = weather.forecast
+		temp
+	end
 
+
+	# fetches some basic matchup stats for each game
 	def self.matchup_stats(team)
 		url = URL_MAP[team]
 		doc = Nokogiri::HTML(open(url))
@@ -153,13 +166,18 @@ class Game < ActiveRecord::Base
 		stats.each.map do |s|
 			s.join ' '
 		end
-
 	end
 
 
 
 	def default_values
 		self.status ||= 'Current'
+	end
+
+	def kickoff_time
+		time_string = "#{self.start_date} " + "#{self.kickoff}"
+		converted = Time.parse(time_string)
+		self.update_attributes(:start_time => converted)
 	end
 
 end

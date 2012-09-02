@@ -93,6 +93,16 @@ class PlaysController < ApplicationController
 		end
 	end
 
+	def trends
+
+		@total_plays = current_user.total_plays
+		@favorites = current_user.favorites
+		@underdogs = current_user.underdogs
+		@wins = current_user.wins
+		@losses = current_user.losses
+		@fav_pct = (@favorites / @total_plays)
+	end
+
   private
 
 	def get_game

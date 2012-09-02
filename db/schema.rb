@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731024238) do
+ActiveRecord::Schema.define(:version => 20120829033121) do
 
   create_table "games", :force => true do |t|
     t.integer  "week"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(:version => 20120731024238) do
     t.string   "status",      :default => "Open"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "category"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "results", :force => true do |t|

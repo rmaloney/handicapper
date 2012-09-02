@@ -1,1 +1,18 @@
 <h2> Trends - Your Picks </h2>
+
+<div class="row-fluid">
+	<div class="span3 bordered">
+		<p> You have picked  <%= @total_plays %> games this year.</p>
+
+		<p>  You have <%= @wins %> wins </p>
+		<p>  You have <%= @losses %> losses </>
+
+	</div>
+
+	<div class="span3 bordered">
+		<p> You have picked <%= @favorites %> favorites. <%= @fav_pct %></p>
+
+		<p> You have picked <%= @underdogs %> underdogs. </p>
+
+	</div>
+</div>

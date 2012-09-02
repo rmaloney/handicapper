@@ -80,21 +80,21 @@
           <div class="sidebar-nav">
             <ul class="nav nav-list">
               <% if user_signed_in? %>
-                <li class="nav-header red"> Hi, <strong class="dark_blue"> <%= current_user.handle %>  </strong><%= link_to "Sign out", destroy_user_session_path, :class => "red" %>   </li>
+                <li class="nav-header red"> Hi, <strong class="dark_dark_blue"> <%= current_user.handle %>  </strong><%= link_to "Sign out", destroy_user_session_path, :class => "red" %>   </li>
                 <li><%= "You have made #{pluralize(@play_count,'pick')}  this week" %>. <br/> <%= @remaining %> Picks left to submit</li>
                 <li class="nav-header">Picks</li>
-                <li class=""><a class="teal" href="/plays">My Picks</a></li>
-                <li><a class="teal" href="/plays/trends">Pick Trends/Results</a></li>
+                <li class=""><a class="dark_blue" href="/plays">My Picks</a></li>
+                <li><a class="dark_blue" href="/plays/trends">Pick Trends/Results</a></li>
               <% end %>
               <li class="nav-header"> Games</li>
-              <li><a class="teal" href="/games">Current Lines</a></li>
-              <li><a class="teal" href="/results">Game Results</a></li>
-              <li><a class="teal" href="/games/schedule">Schedule</a></li>
+              <li><a class="dark_blue" href="/games">Current Lines</a></li>
+              <li><a class="dark_blue" href="/results">Game Results</a></li>
+              <li><a class="dark_blue" href="/games/schedule">Schedule</a></li>
 
               <li class="nav-header"> News </li>
-              <li><a class="teal" href="#"> Injury </a></li>
-              <li><a class="teal" href="#"> Weather</a> </li>
-              <li><a class="teal" href="#"> Latest</a> </li>
+              <li><a class="dark_blue" href="/posts"> Latest </a></li>
+              <li><a class="dark_blue" href="#"> NFL/Fantasy related news</a> </li>
+              
             </ul>
           </div><!--/.well -->
         </div><!--/spam -->

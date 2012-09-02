@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @current_week = 1
-    @games = Game.where(:week => @current_week)
+    @games = Game.where(:week => @current_week).order(&:kickoff_time)
     @play_count = Play.open.where(:user_id => current_user.id).length
     @remaining = 6 - @play_count
 
@@ -23,9 +23,13 @@ class GamesController < ApplicationController
 
   #Load and paginate the full schedule
   def schedule
-    start = Time.parse('2012-09-05')
-    @games = Game.where(:start_date => ((Time.now)..(start + 7.days)))
-    @schedule = Game.order("week ASC").paginate(:page => params[:page])
+  
+    if (params[:week])
+      @selected_games = Game.where(:week => Integer(params[:week]))
+    else
+      @selected_games = Game.where(:week => 1).order(&:kickoff_time)
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @game }
@@ -39,6 +43,7 @@ class GamesController < ApplicationController
     @home_stats = Game.matchup_stats(@game.home_team)
     @visitor_stats = Game.matchup_stats(@game.visitor_team)
 
+    @weather = @game.weather
     if current_user.has_play?(params[:id])
       @message = "You have a a pending play on this game."
     end

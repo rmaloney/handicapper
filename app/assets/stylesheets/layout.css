@@ -33,7 +33,7 @@
 .orange {color: #8F3212;} /*#8F3812;} */
 .burnt_orange { color: #ff7400; }
 /* Adds grey border and 5px padding. Useful for debugging */
-.bordered {border: 1px solid #444;}
+.bordered {border: 1px solid #444; padding: 5px;}
 .underline{text-decoration: underline;}
 .brown{color: #46281D;}
 .teal { color: #009999;}

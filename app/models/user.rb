@@ -54,4 +54,31 @@ class User < ActiveRecord::Base
   def pushes
     self.plays.select{|p| p.play_result == "Push"}.length
   end
+
+  # trends
+   
+   def total_plays
+     self.plays.where(:status => "Closed").length
+   end
+
+   def favorites
+    self.plays.where(:selection => "Favorite").length
+   end
+
+   def underdogs
+    self.plays.where(:selection => "Underdog").length
+   end
+
+   def overs
+     self.plays.where(:selection => "Over").length
+   end
+
+   def unders
+     self.plays.where(:selection => "Under").length
+   end
+
+   
+    
+   
+  
 end

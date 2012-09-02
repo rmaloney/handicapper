@@ -1,9 +1,14 @@
-<h2> 2012 Schedule </h2>
-<%= will_paginate @schedule %>
+<h2> 2012 NFL Schedule </h2>
 
 
 
-		<% @schedule.each do |game| %>
+
+<%= form_tag("/games/schedule", :method => "get") do %>
+	<%= button_tag "Go", :class => "btn btn-primary pull-left" %>
+	<%= select_tag(:week, options_for_select((1..17).to_a), options={:prompt => "Choose a Week"}) %>
+	
+<% end %>
+		<% @selected_games.each do |game| %>
 
 			<div class="row-fluid game_display">
 
@@ -13,7 +18,7 @@
 	            </div>
 
 	            <div class="span4">
-	                <h3 class="blue"> <%= game.visitor_team%> at <%= game.home_team  %> </h3>
+	                <h3 class="dark_red"> <%= game.visitor_team%> at <%= game.home_team  %> </h3>
 	                <%= link_to 'Details', game, :class => "btn btn-primary btn-inverse" %>
 
 	                <% if can? :update, game %>
