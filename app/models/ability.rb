@@ -12,6 +12,7 @@ class Ability
 		else
 			can :schedule, Game
 			can :read, Game
+			can :read, Post
 			can [:create, :read,:update, :destroy, :trends], Play, :user_id => user.id
 			can :read, Play, :status => "Closed"
 			can :manage, User, :user_id => user.id	
