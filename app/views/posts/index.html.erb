@@ -1,0 +1,12 @@
+
+<div class="span-8">
+  <% @posts.each do |post| %>
+    
+    <article>
+      <h2> <%= link_to "#{post.title}", post %> </h2>
+      <p>  <%= post.body  %></p>
+    </article>
+
+  <% end %>
+</div>
+
