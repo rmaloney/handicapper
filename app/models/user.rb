@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
   # trends
    
    def total_plays
-     self.plays.where(:status => "Closed").length
+     self.plays.length
    end
 
    def favorites
@@ -77,8 +77,17 @@ class User < ActiveRecord::Base
      self.plays.where(:selection => "Under").length
    end
 
-   
-    
+   # returns a hash with counts for teams user has picked the most
+   def top_teams
+    plays = self.plays.where(:selection => ["Favorite", "Underdog"])
+    counts = Hash.new(0)
+    plays.each do |p|
+      p.selection == "Favorite" ? "#{team = p.game.favorite}" : "#{team = p.game.underdog}"
+      counts[team] +=1
+      puts counts.inspect
+    end
+   end
+
    
   
 end

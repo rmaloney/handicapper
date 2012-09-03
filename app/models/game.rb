@@ -175,9 +175,10 @@ class Game < ActiveRecord::Base
 	end
 
 	def kickoff_time
-		time_string = "#{self.start_date} " + "#{self.kickoff}"
-		converted = Time.parse(time_string)
-		self.update_attributes(:start_time => converted)
+		start = self.start_date
+		ko = self.kickoff
+		ko_time = Time.parse("#{start} #{ko}" )
+		self.update_attributes(:start_time => ko_time)
 	end
 
 end

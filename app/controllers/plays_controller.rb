@@ -96,11 +96,15 @@ class PlaysController < ApplicationController
 	def trends
 
 		@total_plays = current_user.total_plays
+		
 		@favorites = current_user.favorites
 		@underdogs = current_user.underdogs
+		@overs = current_user.overs
+		@unders = current_user.unders
+
 		@wins = current_user.wins
 		@losses = current_user.losses
-		@fav_pct = (@favorites / @total_plays)
+		@fav_pct = ((@favorites / @total_plays).to_f * 100)
 	end
 
   private

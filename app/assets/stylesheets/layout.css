@@ -46,6 +46,24 @@ a.blue_hover:hover{
 a.green_hover{
 
 }
+
+.div_header{
+margin: 0;
+padding: 4px;
+ background-image: linear-gradient(bottom, rgb(255,255,255) 1%, rgb(232,232,232) 51%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 1%, rgb(232,232,232) 51%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 1%, rgb(232,232,232) 51%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 1%, rgb(232,232,232) 51%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 1%, rgb(232,232,232) 51%);
+
+background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.01, rgb(255,255,255)),
+  color-stop(0.51, rgb(232,232,232))
+);
+}
 /* game display */
 
 .game_display {

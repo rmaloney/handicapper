@@ -51,8 +51,8 @@
 
     <div class="field">
       <%= f.label :start_time %>
-      <%= f.date_select :start_time %>
-      <%= f.time_select :start_time, :ampm => true, :ignore_date => true %>
+      <%= f.datetime_select(:start_time, :discard_seconds =>"True") %>
+      
     </div>
     <div class="field">
       <%= f.label :status %><br />

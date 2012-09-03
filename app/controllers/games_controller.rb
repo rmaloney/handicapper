@@ -25,9 +25,9 @@ class GamesController < ApplicationController
   def schedule
   
     if (params[:week])
-      @selected_games = Game.where(:week => Integer(params[:week]))
+      @selected_games = Game.where(:week => Integer(params[:week])).order("start_time")
     else
-      @selected_games = Game.where(:week => 1).order(&:kickoff_time)
+      @selected_games = Game.where(:week => 1).order("start_time")
     end
 
     respond_to do |format|
