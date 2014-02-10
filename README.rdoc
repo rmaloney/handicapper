@@ -7,8 +7,8 @@ Wins and losses are tallied up throughout the season, with pushes not counted. A
 
 Some features added so far:
 
-Rake tasks to bulk import an entire season's worth of NFL games.
-Logic to pull teams offensive and defensive statistics (YPG, ranks, using Nokogiri)
-Logic to update game scores using Nokogiri. This is currently ran manually by administrators but could be rolled into a cron job
-Logic to process wins, losses, pushes against the spread and total, and update group standings accordingly.
+* Rake tasks to bulk import an entire season's worth of NFL games.
+* Logic to pull teams offensive and defensive statistics (YPG, ranks, using Nokogiri)
+* Logic to update game scores using Nokogiri. This is currently ran manually by administrators but could be rolled into a cron job
+* Logic to process wins, losses, pushes against the spread and total, and update group standings accordingly.
 
