@@ -86,7 +86,7 @@ class Game < ActiveRecord::Base
 	#Date ranges for all 17 weeks.
 	#Allows app to calculate the current week we are in
 	def current_week
-
+		#TODO
 	end 
 
 	#determines the underdog of the game
@@ -120,9 +120,7 @@ class Game < ActiveRecord::Base
 	    end
 	end
 
-	
-
-	
+		
 	# team logos
 	def home_team_logo
 		self.home_team + ".jpg"
@@ -136,14 +134,7 @@ class Game < ActiveRecord::Base
 		side + ".jpg"
 	end
 
-	def weather
-		barometer = Barometer.new("#{self.home_team}")
-		weather = barometer.measure
-		temp = weather.forecast
-		temp
-	end
-
-
+	
 	# fetches some basic matchup stats for each game
 	def self.matchup_stats(team)
 		url = URL_MAP[team]

@@ -7,17 +7,18 @@
 
 	<div class="details">
 	  
-	  <p><strong><%= @play.game.index_favorite + " (-#{@play.game.line})" + " vs. " + @play.game.index_underdog %>   </strong></p>
+	  <h4><%= @play.game.index_favorite + " (-#{@play.game.line})" + " vs. " + @play.game.index_underdog %>   </h4><br/>
 
 	  <p><strong> Total: </strong> <%= @play.game.total %> </p> 
 
-	  <p> <strong> Play last updated on: </strong> <%= @play.updated_at.strftime('%B %d, %Y %l:%M%P%Z') %>   </p>
+	  <p> <strong> This play was last updated on: </strong> <%= @play.updated_at.strftime('%B %d, %Y %l:%M%P%Z') %>   </p>
 	  
 
 		<p>
-		<strong> Your Selection: </strong>
+		<strong class="red"> Your Selection: </strong>
 			<%= @play.selection_details %>
 		</p>
-
-		<%= link_to "Edit this Pick", edit_play_path(@play), :class => "btn" %>
+		<br/>
+		<br/>
+		<%= link_to "Edit this Pick", edit_play_path(@play), :class => "btn btn-success" %>
 	</div>

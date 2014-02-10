@@ -41,12 +41,9 @@ URL_MAP = {
 def home_stats(home_team)
 		home_url = URL_MAP[home_team]
 		doc = Nokogiri::HTML(open(home_url))
-
-		# Fetch stats.
-		# 1 =>Pass yd
-		# 2 =>Rush Yards
-		# 3 =>Opp Pass Yards
-		# 4 => Opp Rush Yards
+		# Fetch stats. 
+		# Nokogiri will scrape stats for yards and ranks and place them into an 
+		# 1 =>Pass yd # 2 =>Rush Yards # 3 =>Opp Pass Yards 	# 4 => Opp Rush Yards
 		yards = []
 		ranks = []
 		

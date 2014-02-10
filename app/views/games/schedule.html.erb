@@ -4,26 +4,36 @@
 
 
 <%= form_tag("/games/schedule", :method => "get") do %>
-	<%= button_tag "Go", :class => "btn btn-primary pull-left" %>
+	<%= button_tag "Go", :class => "btn btn-success pull-left" %>
 	<%= select_tag(:week, options_for_select((1..17).to_a), options={:prompt => "Choose a Week"}) %>
 	
 <% end %>
+
+
+	<table class="table table-bordered table-condensed" style="width: 85%;">
+		<thead>
+			<tr>
+				<th> Week </th>
+				<th> Day </th>
+				<th> Start Time </th>
+				<th> Game </th>
+				<th> Actions </th>
+		</thead>
+		<tbody>
 		<% @selected_games.each do |game| %>
 
-			<div class="row-fluid game_display">
-
-				<div class = "span3">
-					<h4> Week <%= game.week %> </h4>
-	               <h3><%= game.start_date.strftime('%A') %>   <%= game.kickoff %>  </h3>
-	            </div>
-
-	            <div class="span4">
-	                <h3 class="dark_red"> <%= game.visitor_team%> at <%= game.home_team  %> </h3>
-	                <%= link_to 'Details', game, :class => "btn btn-primary btn-inverse" %>
-
-	                <% if can? :update, game %>
+			<tr>
+				<td>Week <%= game.week %></td>
+				<td><%= game.start_date.strftime('%A') %></td>
+				<td><%= game.kickoff %></td>
+				<td> <%= game.visitor_team%> at <%= game.home_team  %></td>
+				<td> 
+					<%= link_to 'Details', game, :class => "btn btn-primary btn-inverse" %> 
+				
+					<% if can? :update, game %>
 	                    <%= link_to 'Edit', edit_game_path(game), :class => "btn " %>
-	                <% end %>
-	            </div>
-	        </div>
+	                <% end %></td>
+			</tr>
         <% end %>
+		</tbody>
+		</table>

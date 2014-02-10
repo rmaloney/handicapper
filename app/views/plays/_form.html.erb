@@ -24,7 +24,7 @@
          <%= f.hidden_field(:user_id, :value => current_user.id ) %>
             
           
-            <div class="span3 controls">
+            <div class="span4 controls">
               	<label><strong> Totals Betting </strong></label>
               	<label class="radio">
           	    	<%= f.radio_button :selection, "Under" %>
@@ -39,7 +39,7 @@
             </div>
 
           
-            <div class="span3 controls">
+            <div class="span4 controls">
               
                 	<label><strong> Pointspread Betting </strong> </label>
                 	<label class="radio">
@@ -51,13 +51,14 @@
             			<%= f.radio_button :selection, "Underdog" %>
             			<%= @game.underdog+ " +#{@game.line}" %>
             		</label>
-
+					<br/>
+					
                 <br/>
-                <%= f.submit "Submit", :class => "btn btn-success" %>
-          
+				<%= f.submit "Submit", :class => "btn btn-success", :style => "width: 200px;  text-align: center;"%>
           </div>
-          
+				 
         </div>
+		
       <br/>
 
        

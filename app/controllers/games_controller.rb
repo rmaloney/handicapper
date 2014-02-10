@@ -43,7 +43,6 @@ class GamesController < ApplicationController
     @home_stats = Game.matchup_stats(@game.home_team)
     @visitor_stats = Game.matchup_stats(@game.visitor_team)
 
-    @weather = @game.weather
     if current_user.has_play?(params[:id])
       @message = "You have a a pending play on this game."
     end

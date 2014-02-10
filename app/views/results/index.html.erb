@@ -8,7 +8,7 @@
         <th>Underdog </th>
        
         <th>Winning Sides</th>
-        <th></th>
+        
       </tr>
 
         <% @results.each do |result| %>
@@ -19,7 +19,7 @@
             <td> <%= result.line_result + ", " + result.total_result  %> </td>
           
            
-            <td><%= link_to 'Details', result, :class => "btn btn-primary" %>
+           
 
             <% if can? :update, result %>
                 <%= link_to 'Edit', edit_result_path(result), :class => "btn " %>
